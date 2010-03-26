@@ -1,0 +1,59 @@
+/*----------------- Main Structure----------------------*/
+html {
+	background: #d5cebc url(../images/htmlback.jpg) repeat-x;
+}
+body {
+	text-align:center;
+}
+div#wrapper {
+	position:relative;
+	text-align:left;
+	margin: 0 auto;
+	margin-top:100px;
+	width:760px;
+	height:600px;
+	padding:20px;
+	background: #b6b6b6 url(../images/wrapperback.jpg) repeat-x bottom;
+	border: 1px solid #fff;
+}
+div#wrapper h1 {
+	font-size:25px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+div#fp_mock {
+	margin:0 auto;
+	margin-top:20px;
+	width:600px;
+}
+div#fp_mock a {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:12px;
+	color:#000;
+	/*text-decoration:none;*/
+}
+table.results {
+	margin: 0 auto;
+	margin-top:20px;
+	width:700px;
+}
+table.results tr {
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:12px;
+	
+}
+a {
+	text-decoration:none;
+	font-family:Helvetica, Arial, sans-serif;
+}
+a:hover {
+	text-decoration:underline;
+}
+.odd {
+	background-color:#ccc;
+}
+.addbutton {
+	margin-left:30px;
+}
+.highlight {
+	background-color:#dedede;
+}

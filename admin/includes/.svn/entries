@@ -1,0 +1,76 @@
+8
+
+dir
+7
+https://sbwd.googlecode.com/svn/trunk/includes
+https://sbwd.googlecode.com/svn
+
+
+
+2010-03-04T00:26:33.427184Z
+7
+jamesawharton
+
+
+svn:special svn:externals svn:needs-lock
+
+logout.php
+file
+24
+
+
+
+2009-11-24T18:13:58.000000Z
+cb3a386444c67d8b1f33fb001c988ae1
+2010-03-09T03:05:06.949597Z
+24
+jamesawharton
+
+conn_mysql.inc.php
+file
+24
+
+
+
+2010-03-09T01:34:05.000000Z
+17fa3cfa989ff2d3195e1595eb385562
+2010-03-09T03:05:06.949597Z
+24
+jamesawharton
+
+corefuncs.inc.php
+file
+24
+
+
+
+2009-11-24T18:13:58.000000Z
+3acd26cd135eea16268806680fead55e
+2010-03-09T03:05:06.949597Z
+24
+jamesawharton
+
+session_authenticate.php
+file
+24
+
+
+
+2009-11-24T18:13:58.000000Z
+3a57ee1235429855da0bc945b6ae9982
+2010-03-09T03:05:06.949597Z
+24
+jamesawharton
+
+menu.php
+file
+25
+
+
+
+2010-03-09T03:13:34.000000Z
+8a190377567252a1b7e0ec860ccc88d5
+2010-03-09T03:14:28.126476Z
+25
+jamesawharton
+
