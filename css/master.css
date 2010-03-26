@@ -1,0 +1,214 @@
+/*----------------- Main Structure----------------------*/
+html {
+	background: #d5cebc url(../images/htmlback.jpg) repeat-x;
+}
+body {
+	text-align:center;
+}
+div#wrapper {
+	text-align:left;
+	margin: 0 auto;
+	margin-top:100px;
+	width:800px;
+	height:518px;
+	background: url(../images/wrapperback.jpg) repeat-y;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+div#main {
+	position:relative;
+}
+div#fpbigad {
+	position:absolute;
+	width:310px;
+	height:340px;
+	top:135px;
+	left:20px;
+	background:url(../images/fpbigadtransback.png);
+	z-index:5;
+	padding:18px;
+}
+div#adwrapper {
+	margin: 0 auto;
+	width:800px;
+	height:58px;
+	border-left: 1px solid #555;
+	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
+}
+div.ad {
+	float:left;
+	width:264.5px;
+	height:58px;
+	border-left: .5px solid #fff;
+	border-right: .5px solid #fff;
+	background:#FFF;
+}
+div#footer {
+	margin: 0 auto;
+	width:800px;
+	height:20px;
+	padding-top:6px;
+}
+div#footer p {
+	color:#333;
+	font-size:12px;
+	font-family: "Adobe Garamond Pro", "Book Antiqua", "Palatino", "Times New Roman", Times, serif;
+}
+/*----------------- END Main Structure----------------------*/
+
+/*----------------- Styles for 2 column info pages----------------------*/
+div#infodiv {
+	position:absolute;
+	width:350px;
+	left:40px;
+	top:145px;
+	z-index:15;
+}
+div#infodiv h1 {
+	margin-bottom:5px;
+}
+div#infodiv p {
+	font-family:Helvetica, Arial, serif;
+	font-size: 12px;
+	color:#fff;
+	margin-bottom:5px;
+}
+div#infodiv .photothumb {
+	margin:3px;
+	border: 1px solid #fff;
+}
+div#infodiv .photothumb:hover {
+	border: 1px solid #e6d7b4;
+	cursor:pointer;
+}
+.question {
+	color:#e6d7b4;
+}
+img.fpimage {
+	float:right;
+	/*position:absolute;
+		right:0px;*/
+}
+/*----------------- END Styles for 2 column info pages----------------------*/
+
+/*----------------- DIVs for the 3 Column Dynamic pages----------------------*/
+div#infostatic {
+	float:left;
+	width:345px;
+	height:390px;
+}
+div#submenu {
+	position:absolute;
+	top:134px;
+	left:200px;
+	width:131px;
+	height:250px;
+	background:url(../images/submenuback.png);
+}
+div#submenuheader {
+	background:url(../images/submenuheader.jpg) no-repeat;
+	margin: 0 auto;
+	width:128px;
+	height:27px;
+	/*margin-bottom:3px;*/
+	
+}
+div#submenuheader h2 {
+	float:right;
+	font-size:14px;
+	font-family:"Times New Roman", Times, serif;
+	font-weight:normal;
+	color:#FFF;
+	margin-right:3px;
+	margin-top:5px;
+}
+ul#submenuitems {
+	width:131px;
+}
+ul#submenuitems li, ul#submenuitems a {	
+	text-align:right;
+	float:right;
+	width:123px;
+	font-family:"Times New Roman", times, serif;
+	font-size:12px;
+	color:#FFF;
+	margin-right:3px;
+	margin-top:3px;
+	text-decoration:none;
+}
+
+ul#submenuitems a:hover {
+	background:#777;
+}
+div#infonails {
+	float:left;
+	width:200px;
+	height:390px;
+	background-color:#b1b0af;
+}
+div#infonails .scroll-pane{
+	overflow:hidden;
+	height:208px;
+}
+
+div#infonails h1 {
+	text-align:center;
+	margin-top:7px;
+	margin-bottom:5px;
+	font-size:17px;
+	font-family:"Times New Roman", Times, serif;
+	font-weight:normal;
+	color:#FFF;
+}
+div#infonails p.galdescription {
+	margin-left:10px;
+	margin-right:10px;
+	margin-bottom:5px;
+	font-size:10.5px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FFF;
+}
+div#infonails .galthumb {
+	margin-left:3px;
+}
+div#infoimg {
+	float:left;
+	border: 1px solid #949390;
+	width:250px;
+	height:388px;
+}
+/*----------------- END DIVs for the 3 Column Dynamic pages----------------------*/
+
+/*----------------- Paginator Styles----------------------*/
+div.paginator, div.paginator a{
+	font-family:Helvetica, Arial, serif;
+	font-size: 12px;
+	color:#fff;
+	text-decoration:none;
+}
+div.paginator a:hover {
+	text-decoration:underline;
+}
+div.paginator .inactive {
+	color:#777;
+}
+/*----------------- END Paginator Styles----------------------*/
+
+/*----------------- Random stuff----------------------*/
+img#salegown {
+	position:absolute;
+	top:92px;
+	left:680px;
+	z-index:1003;
+}
+div#overlay {
+	position:absolute;
+	height:393px;
+	width:208px;
+	left:280px;
+	z-index:3;
+	background:url(../images/overlay.png);
+}
+/*----------------- END Random stuff----------------------*/
