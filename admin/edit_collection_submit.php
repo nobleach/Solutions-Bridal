@@ -8,7 +8,8 @@
 	foreach($_POST as $key => $value) {
 		${$key} = $value;
 	}
-	$col_desc = htmlentities($col_desc);
+	//need to escape ' or ":
+	$col_desc = mysql_real_escape_string($col_desc);
 	$conn = dbConnect('admin');
 	$insert_query = "UPDATE collections 
 						SET col_type = '$col_type', 

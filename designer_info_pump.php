@@ -12,7 +12,7 @@
 ?>
 <h1><?php echo $info_record['col_name']; ?></h1>
 <p class="galdescription">
-	<?php echo htmlspecialchars($info_record['col_desc']); ?>	
+	<?php echo $info_record['col_desc']; ?>	
 </p>
 
 <div class="scroll-pane">
