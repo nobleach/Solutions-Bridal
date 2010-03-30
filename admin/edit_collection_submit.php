@@ -5,12 +5,13 @@
 		exit;
 	}
 	require_once('includes/conn_mysql.inc.php');
+	$conn = dbConnect('admin');
 	foreach($_POST as $key => $value) {
 		${$key} = $value;
 	}
 	//need to escape ' or ":
-	$col_desc = mysql_real_escape_string($col_desc);
-	$conn = dbConnect('admin');
+	$col_desc = mysql_real_escape_string($col_desc, $conn);
+	
 	$insert_query = "UPDATE collections 
 						SET col_type = '$col_type', 
 						col_name = '$col_name', 

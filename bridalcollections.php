@@ -1,7 +1,8 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$designer_query = 'SELECT col_id, col_name FROM sbwd.collections WHERE col_type = "bridal"';
+	$col_type = $_GET['col_type'];
+	$designer_query = "SELECT col_id, col_name FROM sbwd.collections WHERE col_type = '$col_type'";
 	$designer_rs = mysql_query($designer_query, $conn) or die(mysql_error());
 	$designer_record = mysql_fetch_assoc($designer_rs);
 ?>
@@ -53,7 +54,7 @@
 				<img src="images/collect_bridal_static.jpg" />
 				<div id="submenu">
 					<div id="submenuheader">
-						<h2>BRIDAL</h2>
+						<h2><?php echo strtoupper($col_type); ?></h2>
 					</div>
 					<ul id="submenuitems">
 						<?php do {?>

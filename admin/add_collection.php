@@ -15,8 +15,8 @@
 							SET col_type = '$col_type', 
 							col_name = '$col_name', 
 							col_desc = '$col_desc'";
-		//echo $insert_query;
-		$handle = mysql_query($insert_query, $conn) or die(mysql_error());
+		echo $insert_query;
+		//$handle = mysql_query($insert_query, $conn) or die(mysql_error());
 		if($handle) {
 			$col_id = mysql_insert_id();
 			header("Location: upload_collection_images.php?col_id=$col_id");
@@ -52,8 +52,8 @@
 			<h1>ADMIN SECTION: </h1>
 			<div id="styletwo">
 				<ul>
-					<li><a href="index.html" title="" class="current">Edit Frontpage</a></li>
-					<li><a href="edit_collections.php" title="">Edit Collections</a></li>
+					<li><a href="index.html" title="">Edit Frontpage</a></li>
+					<li><a href="edit_collections.php" title="" class="current">Edit Collections</a></li>
 					<li><a href="edit_photoshoots.php" title="">Edit Photoshoots</a></li>
 					<li><a href="" title="">Edit FAQs</a></li>
 					<li><a href="" title="">View Measurements</a></li>

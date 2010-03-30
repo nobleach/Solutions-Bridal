@@ -27,11 +27,11 @@
 		<table><tr><td>
 		<![endif]-->
 		<ul>
-			<li><a href="#">BRIDAL</a></li>
-			<li><a href="#">ATTENDANTS</a></li>
-			<li><a href="#">ACCESSORIES</a></li>
-			<li><a href="#">MOMS</a></li>
-			<li><a href="#">FLOWERGIRLS</a></li>
+			<li><a href="collections.php?col_type=BRIDAL">BRIDAL</a></li>
+			<li><a href="collections.php?col_type=ATTENDANTS">ATTENDANTS</a></li>
+			<li><a href="collections.php?col_type=ACCESSORIES">ACCESSORIES</a></li>
+			<li><a href="collections.php?col_type=MOMS">MOMS</a></li>
+			<li><a href="collections.php?col_type=FLOWERGIRLS">FLOWERGIRLS</a></li>
 		</ul>
 		<!--[if lte IE 6]>
 		</td></tr></table>
