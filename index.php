@@ -10,7 +10,12 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
-	
+	<link rel="stylesheet" href="css/fontstyle.css" type="text/css" charset="utf-8">
+	<style type="text/css" media="screen">
+		h1.fontface {font: 50px/68px 'TeXGyrePagellaRegular', Arial, sans-serif;letter-spacing: 4px; color:#e6d7b4; margin-bottom:-23px;}
+		h2.fontface {font: 30px/46px 'TeXGyrePagellaRegular', Arial, sans-serif;letter-spacing: 7px; color:#fff; border-bottom:1px solid #fff;}
+		p.style1 {font: 16px 'TeXGyrePagellaRegular', Arial, sans-serif; color:#fff; }
+	</style>
 	<title>index</title>
 	
 </head>
@@ -19,9 +24,10 @@
 	<div id="wrapper">
 		<div id="main">
 			<img src="images/sbheaderlogo.jpg" />
+			<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
 			<div class="menu">
 				<ul>
-					<li><a class="hide" href="index.php">HOME</a>
+					<li><a class="hide" href="#">HOME</a>
 						
 					</li>
 					<li><a class="hide" href="#">COMPANY</a>
@@ -30,12 +36,11 @@
 						<table><tr><td>
 						<![endif]-->
 						<ul>
-							<li><a href="company.php">ABOUT</a></li>
-							<li><a href="experience.php">EXPERIENCE</a></li>
+							<li><a href="#">ABOUT</a></li>
+							<li><a href="#">EXPERIENCE</a></li>
 							<li><a href="#">CONSULTANTS</a></li>
 							<li><a href="#">BIO</a></li>
-							<li><a href="faqs.php">FAQ</a></li>
-							<li><a href="photoshoots.php">PHOTOSHOOTS</a></li>
+							<li><a href="#">FAQ</a></li>
 							<li><a href="#">PRESS</a></li>
 						</ul>
 						<!--[if lte IE 6]>
@@ -91,14 +96,20 @@
 					</li>
 					<li><a class="hide" href="#">BLOG</a></li>
 				</ul>
-				<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
+				
 			</div>
 			<div id="overlay">
 				
 			</div>
 			<img class="fpimage" src="images/fpbridalimage.jpg" />
 			<div id="fpbigad">
-				<img src="images/fpbigad.png" />
+				<h1 class="fontface">FLORIDA</h1>
+				<h2 class="fontface">BRIDAL EXPO</h2>
+				<p class="style1">
+					January 31st, 2010<br />
+					12PM - 4:30PM<br />
+					
+				</p>
 			</div>
 		</div>
 	</div>
