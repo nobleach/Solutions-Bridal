@@ -36,7 +36,7 @@
 			<h3 class="warning">All photos MUST be portrait.</h3>	
 			<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
 				<img src="../collections/thumbs/<?php echo $photo_record['cphoto_url']; ?>" />
-				<a href="delete_collection_photo.php?col_id=<?php echo $photo_record['col_id']; ?>&cphoto_id=<?php echo $photo_record['cphoto_id']; ?>">Delete</a>	
+				<a href="delete_collection_photo.php?col_id=<?php echo $photo_record['col_id']; ?>&cphoto_id=<?php echo $photo_record['cphoto_id']; ?>&cphoto_url=<?php echo $photo_record['cphoto_url']; ?>">Delete</a>	
 				<?php } ?>
 				<h4>Upload a new image</h4>
 			<form enctype="multipart/form-data" action="handleMulti_collections.php" method="post" accept-charset="utf-8">
