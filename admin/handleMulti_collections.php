@@ -9,22 +9,22 @@ foreach ($_FILES["Filedata"]["error"] as $key => $error) {
 		$thName = "sb_" . $rndName;
 		$fsName = "sb_" . $rndName;
 		$name = $_FILES["Filedata"]["name"][$key];
-		$fsDir = "../photoshoots/";
-		$thDir = "../photoshoots/thumbs/";
+		$fsDir = "../collections/";
+		$thDir = "../collections/thumbs/";
 		$a[] = $fsName;
-		$quality = 72;
+		$quality = 87;
 		//move_uploaded_file($tmp_name, "data/$name");
 		list($width, $height) = getimagesize($tmp_name);
 		if($width > $height){
-			$newFsWidth = 392;
-			$newFsHeight = 294;
-			$newThWidth = 100;
-			$newThHeight = 75;
+			$newFsWidth = 389;
+			$newFsHeight = 250;
+			$newThWidth = 101;
+			$newThHeight = 65;
 		} else {
-			$newFsWidth = 294;
-			$newFsHeight = 392;
-			$newThWidth = 75;
-			$newThHeight = 100;
+			$newFsWidth = 250;
+			$newFsHeight = 389;
+			$newThWidth = 65;
+			$newThHeight = 101;
 		}
 			
 		$image_fs = imagecreatetruecolor($newFsWidth, $newFsHeight);
@@ -38,21 +38,17 @@ foreach ($_FILES["Filedata"]["error"] as $key => $error) {
 		
    }
 }
-require_once('connect.php');
-$car_id = $_GET['car_id'];
-//echo $car_id;
-// 
-mysql_select_db($database, $conn);
-
+require_once('includes/conn_mysql.inc.php');
+require_once('includes/corefuncs.inc.php');
+$col_id = $_POST['col_id'];
+$conn = dbConnect('admin');
 for ($i = 0; $i < count($a); $i++) {
-$sql = "INSERT INTO pics (car_id, filename) VALUES ('$car_id','$a[$i]') ";
-$rs = mysql_query($sql, $conn) or die(mysql_error());
+$sql = "INSERT INTO collection_photos (col_id, cphoto_url) VALUES ('$col_id','$a[$i]') ";
+//echo $sql;
+$handle = mysql_query($sql, $conn) or die(mysql_error());
+}
+if($handle) {
+	redirect_to("upload_collection_images.php?col_id=$col_id");
 }
 
-
-echo "Insert Succeeded";
-$insertGoTo = "editRecord.php?car_id=$car_id";
-header(sprintf("Location: %s", $insertGoTo));
-//echo '<a href="list.php">Return to the list</a>'
-//print_r($a);
 ?>

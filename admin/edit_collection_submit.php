@@ -8,7 +8,7 @@
 	foreach($_POST as $key => $value) {
 		${$key} = $value;
 	}
-	
+	$col_desc = htmlentities($col_desc);
 	$conn = dbConnect('admin');
 	$insert_query = "UPDATE collections 
 						SET col_type = '$col_type', 

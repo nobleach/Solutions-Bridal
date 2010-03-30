@@ -28,6 +28,13 @@
 				var url ='designer_info_pump.php?col_id=';
 				
 				$('#infonails').load(url+id);
+				$(".galthumb").live('mouseover', function(){
+					var fsurl = $(this).attr("src");
+					var urlArray = fsurl.split("/");
+					var filename = urlArray[urlArray.length-1];
+					//alert(filename);
+					$("#fsImage").attr({src: "collections/"+filename, alt: "Full Size Pic"});
+				 });
 			})
 		})
 	</script>
@@ -59,7 +66,7 @@
 				
 			</div>
 			<div id="infoimg">
-				<img src="images/gal_placeholder.jpg" />
+				<img id="fsImage" />
 			</div>
 		</div>
 		</div>

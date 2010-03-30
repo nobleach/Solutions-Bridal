@@ -17,6 +17,6 @@
 
 <div class="scroll-pane">
 	<?php do { ?>
-	<img id="<?php echo $pic_record['cphoto_id']; ?>" class="galthumb" src="photoshoots/thumbs/<?php echo $pic_record['cphoto_url']; ?>">
+	<img id="<?php echo $pic_record['cphoto_id']; ?>" class="galthumb" src="collections/thumbs/<?php echo $pic_record['cphoto_url']; ?>">
 	<?php } while($pic_record = mysql_fetch_assoc($pic_rs));?>
 </div>
