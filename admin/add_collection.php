@@ -10,6 +10,7 @@
 		foreach($_POST as $key => $value) {
 			${$key} = $value;
 		}
+		$col_desc = mysql_real_escape_string($col_desc);
 		$insert_query = "INSERT INTO collections 
 							SET col_type = '$col_type', 
 							col_name = '$col_name', 
