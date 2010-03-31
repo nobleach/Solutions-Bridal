@@ -21,7 +21,7 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
-	<title>index</title>
+	<title>Solutions Bridal - <?php echo $col_type; ?> Collections</title>
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
 			$('(#submenuitems li').hover(function(e){

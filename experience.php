@@ -10,7 +10,7 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
-	<title>index</title>
+	<title>Solutions Bridal - Experience</title>
 	
 </head>
 
