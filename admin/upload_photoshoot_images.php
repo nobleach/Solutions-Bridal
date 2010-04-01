@@ -18,7 +18,20 @@
 		
 		<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		
+		<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/paginator.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function () {  $("#thumbholder").pagination();  });
+		</script>
+		<style type="text/css" media="screen">
+		div#thumbholder {
+			position:absolute;
+			width:700px;
+			height:300px;
+			border: 1px solid #000;
+			background-color:#fff;
+		}
+	</style>
 	</head>
 	
 	<body>
@@ -33,11 +46,13 @@
 					<li><a href="" title="">View Measurements</a></li>
 				</ul>
 			</div>
-				
-			<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
+			<div id="thumbHolder">
+				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
 				<img src="../collections/thumbs/<?php echo $photo_record['cphoto_url']; ?>" />
 				<a href="delete_collection_photo.php?col_id=<?php echo $photo_record['col_id']; ?>&cphoto_id=<?php echo $photo_record['cphoto_id']; ?>&cphoto_url=<?php echo $photo_record['cphoto_url']; ?>">Delete</a>	
 				<?php } ?>
+			</div>
+			
 				<h4>Upload a new image</h4>
 			<form enctype="multipart/form-data" action="uploadify.php" method="post" accept-charset="utf-8">
 				<label for="Filedata">Image: </label><input type="file" name="Filedata[]" value="" id="image">
