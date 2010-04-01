@@ -80,7 +80,7 @@
 				</table>
 				<br />
 				<input type="hidden" name="col_id" value="<?php echo $collection_record->col_id; ?>" id="col_id">
-				<p class="btnSubmit"><input type="submit" value="Submit"></p>
+				<p class="btnSubmit"><input name="submit" type="submit" value="Submit"></p>
 			</form>		
 		</div>
 	</body>
