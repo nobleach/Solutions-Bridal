@@ -51,7 +51,8 @@ if (!empty($_FILES)) {
 	// 	echo 'Invalid file type.';
 	// }
 }
-
+require_once('includes/conn_mysql.inc.php');
+$conn = dbConnect('admin');
 $sql = "INSERT INTO photoshoot_photos (ps_id, photo_url) VALUES ('$ps_id','$fsName')";
 //echo $sql;
 $handle = mysql_query($sql, $conn) or die(mysql_error());

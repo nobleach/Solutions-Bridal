@@ -48,14 +48,14 @@
 			</div>
 			<div id="thumbHolder">
 				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
-				<img src="../collections/thumbs/<?php echo $photo_record['cphoto_url']; ?>" />
-				<a href="delete_collection_photo.php?col_id=<?php echo $photo_record['col_id']; ?>&cphoto_id=<?php echo $photo_record['cphoto_id']; ?>&cphoto_url=<?php echo $photo_record['cphoto_url']; ?>">Delete</a>	
+				<img src="../collections/thumbs/<?php echo $photo_record['photo_url']; ?>" />
+				<a href="delete_collection_photo.php?col_id=<?php echo $photo_record['ps_id']; ?>&cphoto_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Delete</a>	
 				<?php } ?>
 			</div>
 			
 				<h4>Upload a new image</h4>
 			<form enctype="multipart/form-data" action="uploadify.php" method="post" accept-charset="utf-8">
-				<label for="Filedata">Image: </label><input type="file" name="Filedata[]" value="" id="image">
+				<label for="Filedata">Image: </label><input type="file" name="Filedata" value="" id="image">
 				<input type="hidden" name="col_id" value="<?php echo $col_id; ?>" id="col_id">
 
 				<p><input type="submit" value="Upload"></p>
