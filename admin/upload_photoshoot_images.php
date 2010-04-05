@@ -47,8 +47,19 @@
 			border: 1px solid #000;
 			background-color:#fff;
 		}
-		div#thumbHolder a {
+		div.thumbNail {
+			float:left;
+			height:160px;
+			width:170px;
+		}
+		div.thumbNail a, div.thumbNail p {
+			float:left;
+			margin-right:12px;
+			margin-left:3px;
 			font-size:11px;
+		}
+		div.thumbNail img {
+			
 		}
 	</style>
 	</head>
@@ -67,9 +78,11 @@
 			</div>
 			<div id="thumbHolder">
 				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
-				<img src="../photoshoots/thumbs/<?php echo $photo_record['photo_url']; ?>" />
-				<a href="delete_photoshoot_photo.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Delete</a> | 
-				<a href="set_thumbnail.php?photo_id=<?php echo $photo_record['photo_id']; ?>">Set As Thumbnail</a>	
+						<div class="thumbNail">
+							<img src="../photoshoots/thumbs/<?php echo $photo_record['photo_url']; ?>" />
+							<a href="delete_photoshoot_photo.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Delete</a>  
+							<a href="set_thumbnail.php?photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Set As Thumbnail</a>
+						</div>
 				<?php } ?>
 			</div>
 			
