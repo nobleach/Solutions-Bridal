@@ -52,7 +52,9 @@ if (!empty($_FILES)) {
 	// }
 }
 require_once('includes/conn_mysql.inc.php');
+require_once('includes/corefuncs.inc.php');
 $conn = dbConnect('admin');
+$ps_id = $_POST['ps_id'];
 $sql = "INSERT INTO photoshoot_photos (ps_id, photo_url) VALUES ('$ps_id','$fsName')";
 //echo $sql;
 $handle = mysql_query($sql, $conn) or die(mysql_error());

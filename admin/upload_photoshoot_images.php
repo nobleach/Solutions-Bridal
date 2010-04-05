@@ -18,18 +18,37 @@
 		
 		<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/uploadify.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="scripts/paginator.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/swfobject.js" type="text/javascript" charset="utf-8"></script>
+		<script src="scripts/jquery.uploadify.v2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script type="text/javascript">
-			$(function () {  $("#thumbholder").pagination();  });
+			$(document).ready(function() {
+			$("#fileInput2").uploadify({
+					'uploader'       : 'scripts/uploadify.swf',
+					'script'         : 'uploadify.php',
+					'cancelImg'      : 'images/cancel.png',
+					'folder'         : 'images',
+					'multi'          : true,
+					'scriptData'	 : {"ps_id":'<?php echo $ps_id; ?>'},
+					'onAllComplete'  : function() {
+										location.reload(true);
+										}
+				});
+		})
+			
 		</script>
 		<style type="text/css" media="screen">
-		div#thumbholder {
-			position:absolute;
+		div#thumbHolder {
+			overflow:scroll;
 			width:700px;
-			height:300px;
+			height:260px;
 			border: 1px solid #000;
 			background-color:#fff;
+		}
+		div#thumbHolder a {
+			font-size:11px;
 		}
 	</style>
 	</head>
@@ -48,17 +67,16 @@
 			</div>
 			<div id="thumbHolder">
 				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
-				<img src="../collections/thumbs/<?php echo $photo_record['photo_url']; ?>" />
-				<a href="delete_collection_photo.php?col_id=<?php echo $photo_record['ps_id']; ?>&cphoto_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Delete</a>	
+				<img src="../photoshoots/thumbs/<?php echo $photo_record['photo_url']; ?>" />
+				<a href="delete_photoshoot_photo.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Delete</a> | 
+				<a href="set_thumbnail.php?photo_id=<?php echo $photo_record['photo_id']; ?>">Set As Thumbnail</a>	
 				<?php } ?>
 			</div>
 			
-				<h4>Upload a new image</h4>
+				<h4>Upload new image images:</h4>
 			<form enctype="multipart/form-data" action="uploadify.php" method="post" accept-charset="utf-8">
-				<label for="Filedata">Image: </label><input type="file" name="Filedata" value="" id="image">
-				<input type="hidden" name="col_id" value="<?php echo $col_id; ?>" id="col_id">
-
-				<p><input type="submit" value="Upload"></p>
+				<input id="fileInput2" name="fileInput2" type="file" /> <a href="javascript:$('#fileInput2').uploadifyUpload();">Upload Files</a> | <a href="javascript:$('#fileInput2').uploadifyClearQueue();">Clear Queue</a>
+				<input type="hidden" name="ps_id" value="<?php echo $ps_id; ?>" id="ps_id">
 			</form>
 		</div>
 	</body>
