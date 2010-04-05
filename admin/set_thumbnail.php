@@ -327,17 +327,6 @@ $(window).load(function () {
 <?php }?>
 <h1>Photo Upload and Crop</h1>
 <?php
-//Display error message if there are any
-if(strlen($error)>0){
-	echo "<ul><li><strong>Error!</strong></li><li>".$error."</li></ul>";
-}
-if(strlen($large_photo_exists)>0 && strlen($thumb_photo_exists)>0){
-	echo $large_photo_exists."&nbsp;".$thumb_photo_exists;
-	
-	//Clear the time stamp session and user file extension
-	$_SESSION['random_key']= "";
-	$_SESSION['user_file_ext']= "";
-}else{
 		if(strlen($large_photo_exists)>0){?>
 		<h2>Create Thumbnail</h2>
 		<div align="center">
@@ -357,7 +346,6 @@ if(strlen($large_photo_exists)>0 && strlen($thumb_photo_exists)>0){
 			</form>
 		</div>
 	<hr />
-	<?php 	} ?>
 	
 <?php } ?>
 <!-- Copyright (c) 2008 http://www.webmotionuk.com -->
