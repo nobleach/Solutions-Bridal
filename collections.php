@@ -33,8 +33,12 @@
 					var fsurl = $(this).attr("src");
 					var urlArray = fsurl.split("/");
 					var filename = urlArray[urlArray.length-1];
+					var fullpath = "collections/"+filename;
 					//alert(filename);
-					$("#fsImage").attr({src: "collections/"+filename, alt: "Full Size Pic"});
+					//$("#fsImage").attr({src: "collections/"+filename, alt: "Full Size Pic"});
+					$("#fsImage").fadeOut("slow", function() {
+						$(this).attr("src", fullpath).fadeIn('slow');
+					})
 				 });
 			})
 		})
