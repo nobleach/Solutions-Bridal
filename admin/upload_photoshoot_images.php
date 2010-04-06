@@ -81,14 +81,15 @@
 			</div>
 			<p>
 				Current Thumbnail Image:
+				<img src="../photoshoots/<?php echo $thumbnail_record->ps_thumb; ?>">
 			</p>
-			<img src="../photoshoots/<?php echo $thumbnail_record->ps_thumb; ?>">
+			
 			<div id="thumbHolder">
 				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
 						<div class="thumbNail">
 							<img src="../photoshoots/thumbs/<?php echo $photo_record['photo_url']; ?>" />
 							<a href="delete_photoshoot_photo.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Delete</a>  
-							<a href="set_thumbnail.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Set As Thumbnail</a>
+							<a href="crop.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Set As Thumbnail</a>
 						</div>
 				<?php } ?>
 			</div>
