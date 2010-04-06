@@ -1,11 +1,7 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
 session_start(); //Do not remove this
-//only assign a new timestamp if the session variable is empty
-if (!isset($_SESSION['random_key']) || strlen($_SESSION['random_key'])==0){
-    $_SESSION['random_key'] = strtotime(date('Y-m-d H:i:s')); //assign the timestamp to the session variable
-	$_SESSION['user_file_ext']= "";
-}
+
 #########################################################################################################
 # CONSTANTS																								#
 # You can alter the options below																		#
@@ -132,7 +128,7 @@ function getWidth($image) {
 //Image Locations
 //$large_image_location = $upload_path.$large_image_name.$_SESSION['user_file_ext'];
 //$thumb_image_location = $upload_path.$thumb_image_name.$_SESSION['user_file_ext'];
-$large_image_location = $upload_path.$large_image_name;
+$large_image_location = "../photoshoots/$large_image_name";
 $thumb_image_location = $upload_path.$thumb_image_name;
 
 //Create the upload directory with the right permissions if it doesn't exist
@@ -166,12 +162,13 @@ if (isset($_POST["upload_thumbnail"]) && strlen($large_photo_exists)>0) {
 	$w = $_POST["w"];
 	$h = $_POST["h"];
 	$ps_id = $_POST['ps_id'];
+	$large_image_location = 
 	//Scale the image to the thumb_width set above
 	$scale = $thumb_width/$w;
 	$cropped = resizeThumbnailImage($thumb_image_location, $large_image_location,$w,$h,$x1,$y1,$scale);
 	//Reload the page again to view the thumbnail
 	//header("location:".$_SERVER["PHP_SELF"]);
-	header("location:upload_photoshoot_images.php?ps_id=$ps_id");
+	//header("location:upload_photoshoot_images.php?ps_id=$ps_id");
 	exit();
 }
 
@@ -250,6 +247,7 @@ $(window).load(function () {
 				<input type="hidden" name="w" value="" id="w" />
 				<input type="hidden" name="h" value="" id="h" />
 				<input type="hidden" name="ps_id" value="<?php echo $ps_id; ?>" id="ps_id">
+				<input type="hidden" name="large_image_name" value="<?php echo $large_image_name; ?>" id="large_image_name">
 				<input type="submit" name="upload_thumbnail" value="Save Thumbnail" id="save_thumb" />
 			</form>
 		</div>

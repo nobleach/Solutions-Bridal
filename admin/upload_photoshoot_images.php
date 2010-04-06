@@ -10,7 +10,9 @@
 	$photo_query = "SELECT * FROM photoshoot_photos WHERE ps_id = $ps_id";
 	$photo_rs = mysql_query($photo_query, $conn) or die(mysql_error());
 	
-	
+	$thumbnail_query = "SELECT ps_thumb FROM photoshoots WHERE ps_id = $ps_id";
+	$thumbnail_rs = mysql_query($thumbnail_query, $conn) or die(mysql_error());
+	$thumbnail_record = mysql_fetch_object($thumbnail_rs);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -77,6 +79,10 @@
 					<li><a href="" title="">Newsletter</a></li>
 				</ul>
 			</div>
+			<p>
+				Current Thumbnail Image:
+			</p>
+			<img src="../photoshoots/<?php echo $thumbnail_record->ps_thumb; ?>">
 			<div id="thumbHolder">
 				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
 						<div class="thumbNail">
