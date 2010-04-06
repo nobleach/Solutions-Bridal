@@ -16,7 +16,7 @@
 		h2.fontface {font: 30px/46px 'TeXGyrePagellaRegular', Arial, sans-serif;letter-spacing: 7px; color:#fff; border-bottom:1px solid #fff;}
 		p.style1 {font: 16px 'TeXGyrePagellaRegular', Arial, sans-serif; color:#fff; }
 	</style>
-	<title>index</title>
+	<title>Solutions Bridal</title>
 	
 </head>
 
@@ -27,8 +27,8 @@
 			<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
 			<div class="menu">
 				<ul>
-					<li><a class="hide" href="#">HOME</a>
-						
+					<li><a class="hide" href="index.php">HOME</a>
+
 					</li>
 					<li><a class="hide" href="#">COMPANY</a>
 						<!--[if lte IE 6]>
@@ -36,11 +36,12 @@
 						<table><tr><td>
 						<![endif]-->
 						<ul>
-							<li><a href="#">ABOUT</a></li>
-							<li><a href="#">EXPERIENCE</a></li>
+							<li><a href="company.php">ABOUT</a></li>
+							<li><a href="experience.php">EXPERIENCE</a></li>
 							<li><a href="#">CONSULTANTS</a></li>
-							<li><a href="#">BIO</a></li>
-							<li><a href="#">FAQ</a></li>
+							<li><a href="ourstaff.php">BIO</a></li>
+							<li><a href="faqs.php">FAQ</a></li>
+							<li><a href="photoshoots.php">PHOTOSHOOTS</a></li>
 							<li><a href="#">PRESS</a></li>
 						</ul>
 						<!--[if lte IE 6]>
@@ -54,11 +55,11 @@
 						<table><tr><td>
 						<![endif]-->
 						<ul>
-							<li><a href="#">BRIDAL</a></li>
-							<li><a href="#">ATTENDANTS</a></li>
-							<li><a href="#">ACCESSORIES</a></li>
-							<li><a href="#">MOMS</a></li>
-							<li><a href="#">FLOWERGIRLS</a></li>
+							<li><a href="collections.php?col_type=BRIDAL">BRIDAL</a></li>
+							<li><a href="collections.php?col_type=ATTENDANTS">ATTENDANTS</a></li>
+							<li><a href="collections.php?col_type=ACCESSORIES">ACCESSORIES</a></li>
+							<li><a href="collections.php?col_type=MOMS">MOMS</a></li>
+							<li><a href="collections.php?col_type=FLOWERGIRLS">FLOWERGIRLS</a></li>
 						</ul>
 						<!--[if lte IE 6]>
 						</td></tr></table>
@@ -94,9 +95,9 @@
 						</a>
 						<![endif]-->
 					</li>
-					<li><a class="hide" href="#">BLOG</a></li>
+					<li><a class="hide" href="http://www.thebridalcloset.blogspot.com/">BLOG</a></li>
+					<li><a class="hide" href="#">SALE GOWNS</a></li>
 				</ul>
-				
 			</div>
 			<div id="overlay">
 				

@@ -24,24 +24,15 @@
 				?>
 			</div>
 			<div id="infodiv" style="top:220px;">
-				<h1><img src="images/ourstaffh1.png" /></h1>
+				<h1><img src="images/pressh1.png" /></h1>
 				<p>
-					The Solutions Bridal team have been through extensive training to provide with best knowledge about
-				each designer, gown, and fashion trends. A few of our stylist have even created their own clothing lines
-				and accessory collections, which offers you expert in-house fashion advice! They are absolutely love
-				what they do and will put together your perfect ensemble customizing almost anything in store to fit
-				your taste.
-				</p>
-				<p>
-				Not only will the stylist provide you with impeccable, award-winning service and attention to detail,
-				they can help point you in the right direction by recommending other local vendors to complete your
-				wedding day.
+					
 				</p>
 			</div>
 			<div id="overlay">
 				
 			</div>
-			<img class="fpimage" src="images/staff_winterpark.jpg" />
+			<img class="fpimage" src="" />
 		</div>	
 	</div>
 	<div id="adwrapper">

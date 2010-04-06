@@ -14,7 +14,7 @@
 			<li><a href="ourstaff.php">BIO</a></li>
 			<li><a href="faqs.php">FAQ</a></li>
 			<li><a href="photoshoots.php">PHOTOSHOOTS</a></li>
-			<li><a href="#">PRESS</a></li>
+			<li><a href="press.php">PRESS</a></li>
 		</ul>
 		<!--[if lte IE 6]>
 		</td></tr></table>
@@ -67,6 +67,6 @@
 		</a>
 		<![endif]-->
 	</li>
-	<li><a class="hide" href="#">BLOG</a></li>
+	<li><a class="hide" href="http://www.thebridalcloset.blogspot.com/">BLOG</a></li>
 	<li><a class="hide" href="#">SALE GOWNS</a></li>
 </ul>
