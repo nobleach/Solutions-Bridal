@@ -63,9 +63,7 @@ function resizeThumbnailImage($thumb_image_name, $image, $width, $height, $start
       	case "image/pjpeg":
 		case "image/jpeg":
 		case "image/jpg":
-			echo $newImage .'<br .>';
-			echo $image;
-	  		//imagejpeg($newImage,$thumb_image_name,90);			
+	  		imagejpeg($newImage,$thumb_image_name,90);			
 			break;
 		case "image/png":
 		case "image/x-png":

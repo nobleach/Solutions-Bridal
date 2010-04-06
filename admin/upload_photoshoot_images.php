@@ -81,8 +81,9 @@
 			</div>
 			<p>
 				Current Thumbnail Image:
+				<img src="../photoshoots/<?php echo $thumbnail_record->ps_thumb; ?>">
 			</p>
-			<img src="../photoshoots/<?php echo $thumbnail_record->ps_thumb; ?>">
+			
 			<div id="thumbHolder">
 				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
 						<div class="thumbNail">
