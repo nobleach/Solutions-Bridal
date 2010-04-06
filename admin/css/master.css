@@ -11,7 +11,7 @@ div#wrapper {
 	margin: 0 auto;
 	margin-top:100px;
 	width:760px;
-	height:600px;
+	/*height:600px;*/
 	padding:20px;
 	background: #b6b6b6 url(../images/wrapperback.jpg) repeat-x bottom;
 	border: 1px solid #fff;
