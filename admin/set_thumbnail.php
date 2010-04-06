@@ -26,52 +26,13 @@ $image_ext = "";	// initialise variable, do not change this.
 foreach ($allowed_image_ext as $mime_type => $ext) {
     $image_ext.= strtoupper($ext)." ";
 }
-
+//$image = 'photoshoots/'.$large_image_name;
 
 ##########################################################################################################
 # IMAGE FUNCTIONS																						 #
 # You do not need to alter these functions																 #
 ##########################################################################################################
-function resizeImage($image,$width,$height,$scale) {
-	list($imagewidth, $imageheight, $imageType) = getimagesize($image);
-	$imageType = image_type_to_mime_type($imageType);
-	$newImageWidth = ceil($width * $scale);
-	$newImageHeight = ceil($height * $scale);
-	$newImage = imagecreatetruecolor($newImageWidth,$newImageHeight);
-	switch($imageType) {
-		case "image/gif":
-			$source=imagecreatefromgif($image); 
-			break;
-	    case "image/pjpeg":
-		case "image/jpeg":
-		case "image/jpg":
-			$source=imagecreatefromjpeg($image); 
-			break;
-	    case "image/png":
-		case "image/x-png":
-			$source=imagecreatefrompng($image); 
-			break;
-  	}
-	imagecopyresampled($newImage,$source,0,0,0,0,$newImageWidth,$newImageHeight,$width,$height);
-	
-	switch($imageType) {
-		case "image/gif":
-	  		imagegif($newImage,$image); 
-			break;
-      	case "image/pjpeg":
-		case "image/jpeg":
-		case "image/jpg":
-	  		imagejpeg($newImage,$image,90); 
-			break;
-		case "image/png":
-		case "image/x-png":
-			imagepng($newImage,$image);  
-			break;
-    }
-	
-	chmod($image, 0777);
-	return $image;
-}
+
 //You do not need to alter these functions
 function resizeThumbnailImage($thumb_image_name, $image, $width, $height, $start_width, $start_height, $scale){
 	list($imagewidth, $imageheight, $imageType) = getimagesize($image);
@@ -102,7 +63,9 @@ function resizeThumbnailImage($thumb_image_name, $image, $width, $height, $start
       	case "image/pjpeg":
 		case "image/jpeg":
 		case "image/jpg":
-	  		imagejpeg($newImage,$thumb_image_name,90); 
+			echo $newImage .'<br .>';
+			echo $image;
+	  		//imagejpeg($newImage,$thumb_image_name,90);			
 			break;
 		case "image/png":
 		case "image/x-png":
@@ -162,10 +125,11 @@ if (isset($_POST["upload_thumbnail"]) && strlen($large_photo_exists)>0) {
 	$w = $_POST["w"];
 	$h = $_POST["h"];
 	$ps_id = $_POST['ps_id'];
-	$large_image_location = 
+	$image = $_POST['image'];
+	echo 'Your image name is: ' . $image;
 	//Scale the image to the thumb_width set above
 	$scale = $thumb_width/$w;
-	$cropped = resizeThumbnailImage($thumb_image_location, $large_image_location,$w,$h,$x1,$y1,$scale);
+	$cropped = resizeThumbnailImage($thumb_image_location, '../photoshoots/'.'sq_'.$image,$w,$h,$x1,$y1,$scale);
 	//Reload the page again to view the thumbnail
 	//header("location:".$_SERVER["PHP_SELF"]);
 	//header("location:upload_photoshoot_images.php?ps_id=$ps_id");
@@ -246,8 +210,8 @@ $(window).load(function () {
 				<input type="hidden" name="y2" value="" id="y2" />
 				<input type="hidden" name="w" value="" id="w" />
 				<input type="hidden" name="h" value="" id="h" />
-				<input type="hidden" name="ps_id" value="<?php echo $ps_id; ?>" id="ps_id">
-				<input type="hidden" name="large_image_name" value="<?php echo $large_image_name; ?>" id="large_image_name">
+				<input type="hidden" name="ps_id" value="<?php echo $ps_id; ?>" id="ps_id">	
+				<input type="hidden" name="image" value=<?php echo $_GET['photo_url']; ?>">
 				<input type="submit" name="upload_thumbnail" value="Save Thumbnail" id="save_thumb" />
 			</form>
 		</div>
