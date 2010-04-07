@@ -7,7 +7,7 @@
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
 	$events_query = 'SELECT * FROM events';
-	$events_rs = mysql_query($collection_query, $conn) or die(mysql_error());
+	$events_rs = mysql_query($events_query, $conn) or die(mysql_error());
 	
 ?>
 <!DOCTYPE HTML>
@@ -75,23 +75,29 @@
 				<tr>
 					<th>ID</th>
 					<th>TYPE</th>
-					<th>Designer Name</th>
-					<th>Description</th>
+					<th>Headline</th>
+					<th>Subhead</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Place</th>
 					<th></th>
 					<th></th>
 				</tr>
-				<?php while($collection_record = mysql_fetch_assoc($collection_rs)) { ?>
+				<?php while($events_record = mysql_fetch_assoc($events_rs)) { ?>
 				<tr>
-					<td><?php echo $collection_record['col_id']; ?></td>
-					<td><?php echo $collection_record['col_type']; ?></td>
-					<td><?php echo $collection_record['col_name']; ?></td>
-					<td><?php echo substr($collection_record['col_desc'], 0, 30); ?></td>
-					<td><a href="edit_collection.php?col_id=<?php echo $collection_record['col_id']; ?>" >Edit</a></td>
-					<td><a href="delete_collection.php?col_id=<?php echo $collection_record['col_id']; ?>" >Delete</a></td>
+					<td><?php echo $events_record['event_id']; ?></td>
+					<td><?php echo $events_record['event_type']; ?></td>
+					<td><?php echo $events_record['event_h1']; ?></td>
+					<td><?php echo $events_record['event_h2']; ?></td>
+					<td><?php echo $events_record['event_date']; ?></td>
+					<td><?php echo $events_record['event_time']; ?></td>
+					<td><?php echo $events_record['event_place']; ?></td>
+					<td><a href="edit_event.php?col_id=<?php echo $events_record['event_id']; ?>" >Edit</a></td>
+					<td><a href="delete_event.php?col_id=<?php echo $events_record['event_id']; ?>" >Delete</a></td>
 				</tr>
 				<?php } ?>
 			</table>
-			<p><a class="addbutton" href="add_collection.php">Add Collection</a></p>
+			<p><a class="addbutton" href="add_event.php">Add Collection</a></p>
 		</div>
 	</body>
 </html>

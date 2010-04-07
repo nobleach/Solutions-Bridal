@@ -1,7 +1,7 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$events_query = "SELECT * FROM events WHERE event_type = 'event'";
+	$events_query = "SELECT * FROM events WHERE event_type = 'trunkshow'";
 	$events_rs = mysql_query($events_query, $conn) or die(mysql_error());
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -32,78 +32,9 @@
 			<img src="images/sbheaderlogo.jpg" />
 			<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
 			<div class="menu">
-				<ul>
-					<li><a class="hide" href="index.php">HOME</a>
-
-					</li>
-					<li><a class="hide" href="#">COMPANY</a>
-						<!--[if lte IE 6]>
-						<a href="about.html">ABOUT
-						<table><tr><td>
-						<![endif]-->
-						<ul>
-							<li><a href="company.php">ABOUT</a></li>
-							<li><a href="experience.php">EXPERIENCE</a></li>
-							<li><a href="#">CONSULTANTS</a></li>
-							<li><a href="ourstaff.php">BIO</a></li>
-							<li><a href="faqs.php">FAQ</a></li>
-							<li><a href="photoshoots.php">PHOTOSHOOTS</a></li>
-							<li><a href="#">PRESS</a></li>
-						</ul>
-						<!--[if lte IE 6]>
-						</td></tr></table>
-						</a>
-						<![endif]-->
-					</li>
-					<li><a class="hide" href="#">COLLECTIONS</a>
-						<!--[if lte IE 6]>
-						<a href="about.html">ABOUT
-						<table><tr><td>
-						<![endif]-->
-						<ul>
-							<li><a href="collections.php?col_type=BRIDAL">BRIDAL</a></li>
-							<li><a href="collections.php?col_type=ATTENDANTS">ATTENDANTS</a></li>
-							<li><a href="collections.php?col_type=ACCESSORIES">ACCESSORIES</a></li>
-							<li><a href="collections.php?col_type=MOMS">MOMS</a></li>
-							<li><a href="collections.php?col_type=FLOWERGIRLS">FLOWERGIRLS</a></li>
-						</ul>
-						<!--[if lte IE 6]>
-						</td></tr></table>
-						</a>
-						<![endif]-->
-					</li>
-					<li><a class="hide" href="#">EVENTS</a>
-						<!--[if lte IE 6]>
-						<a href="about.html">ABOUT
-						<table><tr><td>
-						<![endif]-->
-						<ul>
-							<li><a href="#">TRUNK SHOW</a></li>
-							<li><a href="#">EVENTS</a></li>
-							<li><a href="#">EXPO</a></li>
-						</ul>
-						<!--[if lte IE 6]>
-						</td></tr></table>
-						</a>
-						<![endif]-->
-					</li>
-					<li><a class="hide" href="#">SALONS</a>
-						<!--[if lte IE 6]>
-						<a href="about.html">ABOUT
-						<table><tr><td>
-						<![endif]-->
-						<ul>
-							<li><a href="#">GAINESVILLE</a></li>
-							<li><a href="#">WINTER PARK</a></li>
-						</ul>
-						<!--[if lte IE 6]>
-						</td></tr></table>
-						</a>
-						<![endif]-->
-					</li>
-					<li><a class="hide" href="http://www.thebridalcloset.blogspot.com/">BLOG</a></li>
-					<li><a class="hide" href="#">SALE GOWNS</a></li>
-				</ul>
+				<?php
+					include('includes/menu.php');
+				?>
 			</div>
 			<div id="overlay">
 				

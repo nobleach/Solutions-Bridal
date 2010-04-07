@@ -1,0 +1,6 @@
+create delete pages for all records.
+make sure all images are deleted when a user deletes something
+press page
+trunk show page
+finish staff page
+remove BIO link from menus (also from index.php)

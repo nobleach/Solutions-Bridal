@@ -128,16 +128,20 @@ CREATE TABLE `events` (
   `event_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `event_h1` varchar(120) NOT NULL,
   `event_h2` varchar(120) DEFAULT NULL,
-  `event_p` varchar(200) DEFAULT NULL,
   `event_type` varchar(45) NOT NULL,
+  `event_date` varchar(45) NOT NULL,
+  `event_time` varchar(45) DEFAULT NULL,
+  `event_place` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`event_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `events`
 --
 
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
+INSERT INTO `events` (`event_id`,`event_h1`,`event_h2`,`event_type`,`event_date`,`event_time`,`event_place`) VALUES 
+ (1,'FLORDA','BRIDAL EXPO','event','January 31st, 2010','12PM - 4:30PM','');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 
 
