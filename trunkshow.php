@@ -30,7 +30,7 @@
 	<div id="wrapper">
 		<div id="main">
 			<img src="images/sbheaderlogo.jpg" />
-			<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
+			
 			<div class="menu">
 				<?php
 					include('includes/menu.php');
@@ -39,7 +39,7 @@
 			<div id="overlay">
 				
 			</div>
-			<img class="fpimage" src="images/fpbridalimage.jpg" />
+			<img class="fpimage" src="images/fptrunkshow.jpg" />
 			<div id="fpbigad">
 				<?php while($events_record = mysql_fetch_assoc($events_rs)) { ?>
 				<h1 class="fontface"><?php echo $events_record['event_h1']; ?></h1>

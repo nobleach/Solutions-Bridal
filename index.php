@@ -44,8 +44,7 @@
 						<ul>
 							<li><a href="company.php">ABOUT</a></li>
 							<li><a href="experience.php">EXPERIENCE</a></li>
-							<li><a href="#">CONSULTANTS</a></li>
-							<li><a href="ourstaff.php">BIO</a></li>
+							<li><a href="ourstaff.php">CONSULTANTS</a></li>
 							<li><a href="faqs.php">FAQ</a></li>
 							<li><a href="photoshoots.php">PHOTOSHOOTS</a></li>
 							<li><a href="#">PRESS</a></li>
@@ -78,7 +77,7 @@
 						<table><tr><td>
 						<![endif]-->
 						<ul>
-							<li><a href="#">TRUNK SHOW</a></li>
+							<li><a href="trunkshow.php">TRUNK SHOW</a></li>
 							<li><a href="#">EVENTS</a></li>
 							<li><a href="#">EXPO</a></li>
 						</ul>
