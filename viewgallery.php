@@ -75,7 +75,7 @@
 	<style media="screen,projection" type="text/css">
 	
 	/* BEGIN DEMO STYLE */
-	*{margin:0;padding:0}
+	
 	
 	h1,h2{font:bold 80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
 	a{color:#348;text-decoration:none;outline:none;}
@@ -87,14 +87,16 @@
 	.gallery_demo li div{left:240px}
 	.gallery_demo li div .caption{font:italic 0.7em/1.4 georgia,serif;}
 	
-	#main_image{margin:0 auto 60px auto;height:438px;width:700px;background:black;}
-	#main_image img{margin-bottom:10px;}
-	
+	#main_image{margin:0 auto 60px auto;height:438px;width:700px;}
+	#main_image img{margin-bottom:10px; background:none;}
 	.nav{padding-top:15px;clear:both;font:80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
 	
 	.info{text-align:left;width:700px;margin:30px auto;border-top:1px dotted #221;padding-top:30px;}
 	.info p{margin-top:1.6em;}
 	
+	div#wrapper {
+		min-height:750px;
+	}
     </style>
 
 	<title>Wedding Photoshoot</title>
