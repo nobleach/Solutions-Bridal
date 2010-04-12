@@ -8,6 +8,8 @@
 	$conn = dbConnect('admin');	
 	$event_id = $_GET['event_id'];
 	$event_query = "SELECT * FROM events WHERE event_id = $event_id";
+	$event_rs = mysql_query($event_query, $conn) or die(mysql_error());
+	$event_record = mysql_fetch_object($event_rs);
 	
 	if (array_key_exists('submit', $_POST)) {
 		
@@ -20,7 +22,8 @@
 							event_h2 = '$event_h2',
 							event_date = '$event_date',
 							event_time = '$event_time',
-							event_place = '$event_place'";
+							event_place = '$event_place'
+							WHERE event_id = '$event_id'";
 		//echo $insert_query;
 		$handle = mysql_query($insert_query, $conn) or die(mysql_error());
 		if($handle) {
@@ -95,8 +98,8 @@
 			<h1>ADMIN SECTION: </h1>
 			<div id="styletwo">
 				<ul>
-					<li><a href="index.html" title="">Edit Frontpage</a></li>
-					<li><a href="edit_collections.php" title=">Edit Collections</a></li>
+					<li><a href="index.html" title="" >Edit Frontpage</a></li>
+					<li><a href="edit_collections.php" title="">Edit Collections</a></li>
 					<li><a href="edit_photoshoots.php" title="">Edit Photoshoots</a></li>
 					<li><a href="" title="">View Measurements</a></li>
 					<li><a href="" title="">Press</a></li>
@@ -109,32 +112,32 @@
 						<td><p>Event Type:</p></td>
 						<td>
 							<select name="event_type">
-								<option>event</option>
-								<option>expo</option>
-								<option>trunkshow</option>
+								<option <?php if($event_record->event_type == 'event') {echo 'selected ';} ?>value="event">event</option>
+								<option <?php if($event_record->event_type == 'expo') {echo 'selected ';} ?>value="expo">expo</option>
+								<option <?php if($event_record->event_type == 'trunkshow') {echo 'selected ';} ?>value="trunkshow">trunkshow</option>
 							</select>
 						</td>
 					</tr>
 					<tr>
 						<td><p>Event Main Headline:</p></td>
-						<td><input type="text" name="event_h1" value="" id="event_h1"> </td>
+						<td><input type="text" name="event_h1" value="<?php echo $event_record->event_h1; ?>" id="event_h1"> </td>
 						
 					</tr>
 					<tr>
 						<td>Event Sub-Headline:</td>
-						<td><input type="text" name="event_h2" value="" id="event_h2"> </td>
+						<td><input type="text" name="event_h2" value="<?php echo $event_record->event_h2; ?>" id="event_h2"> </td>
 					</tr>
 					<tr>
 						<td>Event Date:</td>
-						<td><input type="text" name="event_date" class="date-pick" value="" /></td>
+						<td><input type="text" name="event_date" class="date-pick" value="<?php echo $event_record->event_date; ?>" /></td>
 					</tr>
 					<tr>
 						<td><p>Event Time:</p></td>
-						<td><input type="text" name="event_time" value="" id="event_time"> </td>
+						<td><input type="text" name="event_time" value="<?php echo $event_record->event_time; ?>" id="event_time"> </td>
 					</tr>
 					<tr>
 						<td><p>Event Location:</p></td>
-						<td><input type="text" name="event_place" value="" id="event_place"> </td>
+						<td><input type="text" name="event_place" value="<?php echo $event_record->event_place; ?>" id="event_place"> </td>
 					</tr>
 				</table>
 				<br />

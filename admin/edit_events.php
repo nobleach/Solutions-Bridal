@@ -64,7 +64,7 @@
 			<div id="styletwo">
 				<ul>
 					<li><a href="index.html" title="" >Edit Frontpage</a></li>
-					<li><a class="current" href="edit_collections.php" title="">Edit Collections</a></li>
+					<li><a href="edit_collections.php" title="">Edit Collections</a></li>
 					<li><a href="edit_photoshoots.php" title="">Edit Photoshoots</a></li>
 					<li><a href="" title="">View Measurements</a></li>
 					<li><a href="" title="">Press</a></li>
@@ -92,7 +92,7 @@
 					<td><?php echo $events_record['event_date']; ?></td>
 					<td><?php echo $events_record['event_time']; ?></td>
 					<td><?php echo $events_record['event_place']; ?></td>
-					<td><a href="edit_event.php?event_id_id=<?php echo $events_record['event_id']; ?>" >Edit</a></td>
+					<td><a href="edit_event.php?event_id=<?php echo $events_record['event_id']; ?>" >Edit</a></td>
 					<td><a href="delete_event.php?event_id=<?php echo $events_record['event_id']; ?>" >Delete</a></td>
 				</tr>
 				<?php } ?>
