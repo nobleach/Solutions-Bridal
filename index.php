@@ -1,7 +1,7 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$events_query = "SELECT * FROM events";
+	$events_query = "SELECT * FROM events LIMIT 2";
 	$events_rs = mysql_query($events_query, $conn) or die(mysql_error());
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -78,8 +78,8 @@
 						<![endif]-->
 						<ul>
 							<li><a href="trunkshow.php">TRUNK SHOW</a></li>
-							<li><a href="#">EVENTS</a></li>
-							<li><a href="#">EXPO</a></li>
+							<li><a href="events.php">EVENTS</a></li>
+							<li><a href="expo.php">EXPO</a></li>
 						</ul>
 						<!--[if lte IE 6]>
 						</td></tr></table>

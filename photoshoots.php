@@ -2,7 +2,9 @@
 	require_once('includes/conn_mysql.inc.php');
 	//connect to DB:
 	$conn = dbConnect('admin');
-	
+	$ps_query = "SELECT * FROM photoshoots";
+	$ps_rs = mysql_query($ps_query, $conn) or die(mysql_error());
+	//$ps_record = mysql_fetch_assoc($ps_rs);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -41,32 +43,13 @@
 			</div>
 			<div id="infodiv" style="top:220px">
 				<h1><img src="images/photoshootsh1.png" /></h1>
-				<div id="thumbholder">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-					<img class="photothumb" src="photoshoots/thumbs/th_fpo.jpg">
-				</div>				
+				<?php while($ps_record = mysql_fetch_assoc($ps_rs)) { ?>
+					<div id="thumbholder">
+						<a href="viewgallery.php?ps_id=<?php echo $ps_record['ps_id']; ?>"> 
+							<img class="photothumb" src="photoshoots/<?php echo $ps_record['ps_thumb']; ?>">
+						</a>
+					</div>	
+				<?php } ?>
 			</div>
 			<img class="fpimage" src="images/fpphotoshoots.jpg" />
 		</div>	

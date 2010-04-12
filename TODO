@@ -1,6 +1,8 @@
 create delete pages for all records.
-make sure all images are deleted when a user deletes something
+make sure all images are deleted when a user deletes a record
 press page
-trunk show page
 finish staff page
+measurements page
 remove BIO link from menus (also from index.php)
+fix <title> tags on all pages
+integrate photo album viewer (http://devkick.com/lab/galleria/)

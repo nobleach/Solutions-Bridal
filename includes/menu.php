@@ -44,8 +44,8 @@
 		<![endif]-->
 		<ul>
 			<li><a href="trunkshow.php">TRUNK SHOW</a></li>
-			<li><a href="#">EVENTS</a></li>
-			<li><a href="#">EXPO</a></li>
+			<li><a href="events.php">EVENTS</a></li>
+			<li><a href="expo.php">EXPO</a></li>
 		</ul>
 		<!--[if lte IE 6]>
 		</td></tr></table>
