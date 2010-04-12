@@ -92,12 +92,12 @@
 					<td><?php echo $events_record['event_date']; ?></td>
 					<td><?php echo $events_record['event_time']; ?></td>
 					<td><?php echo $events_record['event_place']; ?></td>
-					<td><a href="edit_event.php?col_id=<?php echo $events_record['event_id']; ?>" >Edit</a></td>
-					<td><a href="delete_event.php?col_id=<?php echo $events_record['event_id']; ?>" >Delete</a></td>
+					<td><a href="edit_event.php?event_id_id=<?php echo $events_record['event_id']; ?>" >Edit</a></td>
+					<td><a href="delete_event.php?event_id=<?php echo $events_record['event_id']; ?>" >Delete</a></td>
 				</tr>
 				<?php } ?>
 			</table>
-			<p><a class="addbutton" href="add_event.php">Add Collection</a></p>
+			<p><a class="addbutton" href="add_event.php">Add Event</a></p>
 		</div>
 	</body>
 </html>

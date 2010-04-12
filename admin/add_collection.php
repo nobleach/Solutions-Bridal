@@ -15,8 +15,8 @@
 							SET col_type = '$col_type', 
 							col_name = '$col_name', 
 							col_desc = '$col_desc'";
-		echo $insert_query;
-		//$handle = mysql_query($insert_query, $conn) or die(mysql_error());
+		//echo $insert_query;
+		$handle = mysql_query($insert_query, $conn) or die(mysql_error());
 		if($handle) {
 			$col_id = mysql_insert_id();
 			header("Location: upload_collection_images.php?col_id=$col_id");
