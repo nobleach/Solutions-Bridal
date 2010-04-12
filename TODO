@@ -3,6 +3,9 @@ make sure all images are deleted when a user deletes a record
 press page
 finish staff page
 measurements page
-remove BIO link from menus (also from index.php)
 fix <title> tags on all pages
 integrate photo album viewer (http://devkick.com/lab/galleria/)
+ads integration on all pages
+ad uploader
+quotes on each page
+quote edit page
