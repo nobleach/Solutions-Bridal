@@ -18,15 +18,15 @@ if (!empty($_FILES)) {
 	//move_uploaded_file($tmp_name, "data/$name");
 	list($width, $height) = getimagesize($tmp_name);
 	if($width > $height){
-		$newFsWidth = 640;
-		$newFsHeight = 480;
+		$newFsWidth = 700;
+		$newFsHeight = 492;
 		$newThWidth = 160;
-		$newThHeight = 120;
+		$newThHeight = 113;
 	} else {
-		$newFsWidth = 480;
-		$newFsHeight = 640;
+		$newFsWidth = 316;
+		$newFsHeight = 492;
 		$newThWidth = 120;
-		$newThHeight = 160;
+		$newThHeight = 187;
 	}
 	// $fileTypes  = str_replace('*.','',$_REQUEST['fileext']);
 	// $fileTypes  = str_replace(';','|',$fileTypes);

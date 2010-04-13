@@ -1,9 +1,9 @@
-create delete pages for all records.
-make sure all images are deleted when a user deletes a record
+create delete pages for all records. --think this is done.
+make sure all images are deleted when a user deletes a record --think it's done.
 press page
 finish staff page
 measurements page
-fix <title> tags on all pages
+fix <title> tags on all pages --work in progress
 integrate photo album viewer (http://devkick.com/lab/galleria/)
 ads integration on all pages
 ad uploader

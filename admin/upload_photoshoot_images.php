@@ -51,10 +51,11 @@
 		}
 		div.thumbNail {
 			float:left;
-			height:160px;
-			width:170px;
+			height:225px;/*play with this till we get a decent div holder*/
+			width:200px;
 		}
 		div.thumbNail a, div.thumbNail p {
+			clear:both;
 			float:left;
 			margin-right:12px;
 			margin-left:3px;
@@ -87,7 +88,7 @@
 			<div id="thumbHolder">
 				<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
 						<div class="thumbNail">
-							<img src="../photoshoots/thumbs/<?php echo $photo_record['photo_url']; ?>" />
+							<img src="../photoshoots/thumbs/<?php echo $photo_record['photo_url']; ?>" /><br />
 							<a href="delete_photoshoot_photo.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Delete</a>  
 							<a href="crop.php?ps_id=<?php echo $photo_record['ps_id']; ?>&photo_id=<?php echo $photo_record['photo_id']; ?>&photo_url=<?php echo $photo_record['photo_url']; ?>">Set As Thumbnail</a>
 						</div>
