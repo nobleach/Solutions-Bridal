@@ -38,3 +38,8 @@
 	src: url('texgyrepagella-bolditalic.eot');
 	src: local('TeX Gyre Pagella'), local('TeXGyrePagella-BoldItalic'), url('texgyrepagella-bolditalic.woff') format('woff'), url('texgyrepagella-bolditalic.ttf') format('truetype'), url('texgyrepagella-bolditalic.svg#TeXGyrePagella-BoldItalic') format('svg');
 }
+@font-face {
+	font-family: 'BeautifulESRegular';
+	src: url('Beautiful-ES.eot');
+	src: local('Beautiful ES'), local('BeautifulES'), url('Beautiful-ES.woff') format('woff'), url('Beautiful-ES.ttf') format('truetype'), url('Beautiful-ES.svg#BeautifulES') format('svg');
+}

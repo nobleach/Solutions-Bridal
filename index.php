@@ -30,6 +30,10 @@
 	<div id="wrapper">
 		<div id="main">
 			<img src="images/sbheaderlogo.jpg" />
+			<div id="bride_quote">
+				<p class="pretty">"They did rancid awful things to me!"</p>
+				<p class="quote_person">-Sara, Bride to be</p>
+			</div>
 			<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
 			<div class="menu">
 				<ul>

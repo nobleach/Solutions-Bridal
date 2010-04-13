@@ -19,6 +19,22 @@ div#wrapper {
 div#main {
 	position:relative;
 }
+div#bride_quote {
+	position:absolute;
+	left:480px;
+	top:30px;
+	
+}
+div#bride_quote p.pretty {
+	font: 29px/27px 'BeautifulESRegular', Arial, sans-serif;
+	color:#fff;
+	}
+div#bride_quote p.quote_person {
+	margin-top:7px;
+	margin-left:4px;
+	font-size:12px;
+	color:#e6d7b4;
+}
 div#fpbigad {
 	position:absolute;
 	width:310px;
