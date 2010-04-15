@@ -3,6 +3,10 @@
 	$conn = dbConnect('admin');
 	$events_query = "SELECT * FROM events LIMIT 2";
 	$events_rs = mysql_query($events_query, $conn) or die(mysql_error());
+	
+	$q = "SELECT * FROM quotes";
+	$s = mysql_query($q, $conn);
+	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -24,6 +28,17 @@
 	</style>
 	<title>Solutions Bridal</title>
 	
+	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#bride_quote').cycle({
+			speed: 2000,
+			timeout: 5000,
+			cleartype: 1
+		});
+	})	
+</script>
 </head>
 
 <body>
@@ -31,8 +46,12 @@
 		<div id="main">
 			<img src="images/sbheaderlogo.jpg" />
 			<div id="bride_quote">
-				<p class="pretty">"They did rancid awful things to me!"</p>
-				<p class="quote_person">-Sara, Bride to be</p>
+				<?php while($a = mysql_fetch_assoc($s)) { ?>
+					<div>
+						<p class="pretty"><?php echo $a['q_body']; ?></p>
+						<p class="quote_person"><?php echo $a['q_sig']; ?></p>
+					</div>
+				<?php } ?>
 			</div>
 			<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
 			<div class="menu">
@@ -104,7 +123,7 @@
 						</a>
 						<![endif]-->
 					</li>
-					<li><a class="hide" href="http://www.thebridalcloset.blogspot.com/">BLOG</a></li>
+					<li><a class="hide" href="http://www.solutionsbridal.com/blog/">BLOG</a></li>
 					<li><a class="hide" href="#">SALE GOWNS</a></li>
 				</ul>
 			</div>

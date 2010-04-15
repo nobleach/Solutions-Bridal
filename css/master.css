@@ -25,6 +25,10 @@ div#bride_quote {
 	top:30px;
 	
 }
+div#bride_quote div{
+	width:300px;
+	
+}
 div#bride_quote p.pretty {
 	font: 29px/27px 'BeautifulESRegular', Arial, sans-serif;
 	color:#fff;

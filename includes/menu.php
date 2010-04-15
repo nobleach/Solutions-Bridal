@@ -66,6 +66,6 @@
 		</a>
 		<![endif]-->
 	</li>
-	<li><a class="hide" href="http://www.thebridalcloset.blogspot.com/">BLOG</a></li>
+	<li><a class="hide" href="http://www.solutionsbridal.com/blog/">BLOG</a></li>
 	<li><a class="hide" href="#">SALE GOWNS</a></li>
 </ul>
