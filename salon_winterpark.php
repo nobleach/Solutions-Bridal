@@ -1,11 +1,9 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
-	$conn = dbConnect('admin');
-	$events_query = "SELECT * FROM events WHERE event_type = 'trunkshow'";
-	$events_rs = mysql_query($events_query, $conn) or die(mysql_error());
+	$conn = dbConnect('query');
 	
 	$q = "SELECT * FROM quotes";
-	$s = mysql_query($q, $conn);
+	$s = mysql_query($q, $conn);	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -15,17 +13,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/fontstyle.css" type="text/css" charset="utf-8">
 	<link rel="stylesheet" media="all" type="text/css" href="css/dropdown.css" />
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
-	<link rel="stylesheet" href="css/fontstyle.css" type="text/css" charset="utf-8">
-	<style type="text/css" media="screen">
-		h1.fontface {font: 40px/59px 'TeXGyrePagellaRegular', Arial, sans-serif;letter-spacing: 4px; color:#e6d7b4; margin-bottom:-23px;}
-		h2.fontface {font: 25px/46px 'TeXGyrePagellaRegular', Arial, sans-serif;letter-spacing: 7px; color:#fff; border-bottom:1px solid #fff;}
-		p.style1 {font: 16px 'TeXGyrePagellaRegular', Arial, sans-serif; color:#fff; }
-	</style>
-	<title>Solutions Bridal</title>
+	<title>Solutions Bridal - Experience</title>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
@@ -56,28 +49,18 @@
 					include('includes/menu.php');
 				?>
 			</div>
-			<div id="overlay">
-				
-			</div>
-			<img class="fpimage" src="images/fptrunkshow.jpg" />
-			<div id="fpbigad">
-				<?php while($events_record = mysql_fetch_assoc($events_rs)) { ?>
-				<h1 class="fontface"><?php echo $events_record['event_h1']; ?></h1>
-				<h2 class="fontface"><?php echo $events_record['event_h2']; ?></h2>
-				<p class="style1">
-					<?php echo $events_record['event_date']; ?><br />
-					<?php
-					if ($events_record['event_time']) { 
-								echo  $events_record['event_time']; 
-								}
-					if ($events_record['event_place']) { 
-								echo  '<br />' . $events_record['event_place']; 
-								}
-					?>
-				<?php } ?>	
+			<div id="infodiv" style="top:220px;">
+				<h1><img src="images/orlandoh1.png" /></h1>
+				<p>
+						Winter Park<br />
+						407.647.8666<br />
+						Fax 407.647.8633<br />
+						330 W. Fairbanks Ave.<br />
+						Winter Park, FL. 32789
 				</p>
 			</div>
-		</div>
+			<img class="fpimage" src="images/salon_winterpark.jpg" />
+		</div>	
 	</div>
 	<div id="adwrapper">
 		<?php include('includes/ads.php'); ?>

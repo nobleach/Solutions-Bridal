@@ -58,8 +58,8 @@
 		<table><tr><td>
 		<![endif]-->
 		<ul>
-			<li><a href="#">GAINESVILLE</a></li>
-			<li><a href="#">WINTER PARK</a></li>
+			<li><a href="salon_gainesville.php">GAINESVILLE</a></li>
+			<li><a href="salon_winterpark.php">WINTER PARK</a></li>
 		</ul>
 		<!--[if lte IE 6]>
 		</td></tr></table>
