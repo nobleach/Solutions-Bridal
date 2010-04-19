@@ -1,10 +1,9 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
-	$ps_id = $_GET['ps_id'];
 	//connect to DB:
 	$conn = dbConnect('admin');
-	$ps_query = "SELECT * FROM photoshoot_photos WHERE ps_id = $ps_id";
-	$ps_rs = mysql_query($ps_query, $conn) or die(mysql_error());
+	$p_query = "SELECT * FROM press";
+	$p_rs = mysql_query($p_query, $conn) or die(mysql_error());
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,7 +25,7 @@
 	jQuery(function($) {
 		
 		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
-		$('.nav').css('display','none'); // hides the nav initially
+		$('.vnav').css('display','none'); // hides the nav initially
 		
 		$('ul.gallery_demo').galleria({
 			history   : false, // deactivates the history object for bookmarking, back-button etc.
@@ -64,7 +63,7 @@
 	.info{text-align:left;margin:30px 0;border-top:1px dotted #221;padding-top:30px;clear:both;}
 	.info p{margin-top:1.6em;}
 	
-	.nav{position:absolute;top:410px;left:0;}
+	.vnav{position:absolute;top:410px;left:0;}
 
 	
     </style>
@@ -86,8 +85,8 @@
 			
 			</div>
 			<ul class="gallery_demo_unstyled">
-				<?php while($ps_record = mysql_fetch_assoc($ps_rs)) { ?>
-					<li><img src="photoshoots/<?php echo $ps_record['photo_url']; ?>" /></li>
+				<?php while($p_record = mysql_fetch_assoc($p_rs)) { ?>
+					<li><img src="press/<?php echo $p_record['press_img']; ?>" /></li>
 				<?php } ?>
 			</ul>
 		</div>	

@@ -89,8 +89,9 @@
 	
 	#main_image{margin:0 auto 60px auto;height:438px;width:700px;}
 	#main_image img{margin-bottom:10px; background:none;}
-	.nav{padding-top:15px;clear:both;font:80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
-	
+	.nav{padding-left:32px;padding-top:15px;clear:both;font:80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
+	.nav a{color:#DDD; text-decoration:none;}
+	.nav a:hover{text-decoration:underline;}
 	.info{text-align:left;width:700px;margin:30px auto;border-top:1px dotted #221;padding-top:30px;}
 	.info p{margin-top:1.6em;}
 	
@@ -125,15 +126,7 @@
 		</div>	
 	</div>
 	<div id="adwrapper">
-		<div class="ad">
-			
-		</div>
-		<div class="ad">
-			
-		</div>
-		<div class="ad">
-			<a class="hide" href="http://www.solutionsbridal.com/blog/"><img src="images/visitourblogad.jpg" /></a>
-		</div>
+		<?php include('includes/ads.php'); ?>
 	</div>
 	<div id="footer">
 		<p>Winter Park P: 407.647.8666 330 W. Fairbanks Ave. Winter Park, FL 32789 | Gainesville P: 352.367.0070 6450 SW Archer Rd. Suite 230 Gainesville, FL 32608</p>

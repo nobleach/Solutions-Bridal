@@ -6,30 +6,10 @@
 	}
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$q_id = $_GET['q_id'];
-	$q_query = "SELECT * FROM quotes WHERE q_id = '$q_id'";
-	$q_rs = mysql_query($q_query, $conn) or die(mysql_error());
-	$q_record = mysql_fetch_object($q_rs);
-	
-	if (array_key_exists('submit', $_POST)) {
-		foreach($_POST as $key => $value) {
-			${$key} = $value;
-		}
-		$q_body = mysql_real_escape_string($q_body);
-		$insert_query = "UPDATE quotes 
-							SET q_body = '$q_body', 
-							q_sig = '$q_sig'
-							WHERE q_id = '$q_id'";
-		//echo $insert_query;
-		$handle = mysql_query($insert_query, $conn) or die(mysql_error());
-		if($handle) {
-			header("Location: edit_quotes.php");
-			exit;
-		} else {
-			echo 'Error in database insert.';
-		}
-	}
-	
+	$press_id = $_GET['press_id'];
+	$press_query = "SELECT * FROM press WHERE press_id = $press_id";
+	$press_rs = mysql_query($press_query, $conn) or die(mysql_error());
+	$press_record = mysql_fetch_object($press_rs);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -64,26 +44,35 @@
 					<li><a href="email_brides.php" title="">Email Brides</a></li>
 				</ul>
 			</div>	
-			<form action="" method="post" accept-charset="utf-8">
+			<form enctype="multipart/form-data" action="upload_press_img.php" method="post" accept-charset="utf-8">
 				<table>
 					<tr>
-						<td>Quote:</td>
+						<td><p>Piece Name:</p></td>
 						<td>
-							<textarea name="q_body" rows="8" cols="40">
-								<?php echo $q_record->q_body; ?>
-							</textarea>
-						</td>
-						<tr>
-						<td><p>Quote Signature:</p></td>
-						<td>
-							<input type="text" name="q_sig" value="<?php echo $q_record->q_sig; ?>" id="q_sig" /> 
-							<input type="hidden" name="q_id" value="<?php echo $q_record->q_id; ?>" />
+							<input type="text" name="press_name" value="<?php echo $press_record->press_name; ?>" id="press_name">
+							<input type="hidden" name="press_id" value="<?php echo $press_record->press_id; ?>">
 						</td>
 					</tr>
+					<tr>
+						<td><p>Press Desc:</p></td>
+						<td>
+							<textarea name="press_desc" rows="8" cols="40">
+								<?php echo $press_record->press_desc; ?>
+							</textarea> 
+						</td>
+					</tr>
+					<tr>
+						<td><p>Image:</p></td>
+						<td>
+							<img src="../press/thumbs/<?php echo $press_record->press_img; ?>" />
+						</td>
+					</tr>
+					<tr>
+						<td><p>Upload NEW Image:</p></td>
+						<td><input type="file" name="Filedata" value="" id="Filedata"></td>
 					</tr>
 				</table>
 				<br />
-				
 				<p class="btnSubmit"><input name="submit" type="submit" value="Submit"></p>
 			</form>		
 		</div>

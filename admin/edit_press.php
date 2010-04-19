@@ -6,9 +6,8 @@
 	}
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$q_query = 'SELECT * FROM quotes';
-	$q_rs = mysql_query($q_query, $conn) or die(mysql_error());
-	
+	$p_query = 'SELECT * FROM press';
+	$p_rs = mysql_query($p_query, $conn) or die(mysql_error());
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -73,23 +72,26 @@
 			</div>
 			<table  class="results">
 				<tr>
+					<th>Thumbnail</th>
 					<th>ID</th>
-					<th>QUOTE</th>
-					<th>SIGNATURE LINE</th>
+					<th>Piece Name</th>
+					<th>Piece Description</th>
 					<th></th>
 					<th></th>
 				</tr>
-				<?php while($q_record = mysql_fetch_assoc($q_rs)) { ?>
+				<?php while($p_record = mysql_fetch_assoc($p_rs)) { ?>
 				<tr>
-					<td><?php echo $q_record['q_id']; ?></td>
-					<td><?php echo $q_record['q_body']; ?></td>
-					<td><?php echo $q_record['q_sig']; ?></td>
-					<td><a href="edit_quote.php?q_id=<?php echo $q_record['q_id']; ?>" >Edit</a></td>
-					<td><a href="delete_quote.php?q_id=<?php echo $q_record['q_id']; ?>" >Delete</a></td>
+					<td><img src="../press/thumbs/<?php echo $p_record['press_img']; ?>" /></td>
+					<td><?php echo $p_record['press_id']; ?></td>
+					<td><?php echo $p_record['press_name']; ?></td>
+					<td><?php echo $p_record['press_desc']; ?></td>
+					
+					<td><a href="edit_presspiece.php?press_id=<?php echo $p_record['press_id']; ?>" >Edit</a></td>
+					<td><a href="delete_presspiece.php?press_id=<?php echo $p_record['press_id']; ?>" >Delete</a></td>
 				</tr>
 				<?php } ?>
 			</table>
-			<p><a class="addbutton" href="add_quote.php">Add Quote</a></p>
+			<p><a class="addbutton" href="add_presspiece.php">Add Press Piece</a></p>
 		</div>
 	</body>
 </html>

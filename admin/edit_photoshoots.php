@@ -65,9 +65,9 @@
 					<li><a href="index.html" title="" >Edit Frontpage</a></li>
 					<li><a href="edit_collections.php" title="">Edit Collections</a></li>
 					<li><a href="edit_photoshoots.php" title="">Edit Photoshoots</a></li>
-					<li><a href="" title="">Edit Sale Gowns</a></li>
-					<li><a href="" title="">Press</a></li>
-					<li><a href="" title="">Email Brides</a></li>
+					<li><a href="edit_sale_gowns.php" title="">Edit Sale Gowns</a></li>
+					<li><a href="edit_press.php" title="">Press</a></li>
+					<li><a href="email_brides.php" title="">Email Brides</a></li>
 				</ul>
 			</div>
 			<table  class="results">
@@ -81,7 +81,7 @@
 				</tr>
 				<?php while($ps_record = mysql_fetch_assoc($ps_rs)) { ?>
 				<tr>
-					<td><img src="photoshoots/thumb/<?php echo $ps_record['ps_thumb']; ?>" /></td>
+					<td><img src="../photoshoots/<?php echo $ps_record['ps_thumb']; ?>" /></td>
 					<td><?php echo $ps_record['ps_id']; ?></td>
 					<td><?php echo $ps_record['ps_name']; ?></td>
 					<td><?php echo $ps_record['ps_photographer']; ?></td>

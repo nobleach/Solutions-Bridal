@@ -108,7 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		</form>
 
 		<p>
-			<b>Drag moust to draw a square.</b> Hit "Crop Image" to save this image as the current thumbnail.
+			<b>Drag mouse to draw a square.</b> Hit "Crop Image" to save this image as the current thumbnail.
 		</p>
 
 
