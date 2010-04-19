@@ -59,7 +59,7 @@
 			<div id="overlay">
 				
 			</div>
-			<img class="fpimage" src="images/fptrunkshow.jpg" />
+			<img class="fpimage" src="images/fpexpo.jpg" />
 			<div id="fpbigad">
 				<?php while($events_record = mysql_fetch_assoc($events_rs)) { ?>
 				<h1 class="fontface"><?php echo $events_record['event_h1']; ?></h1>
@@ -80,15 +80,7 @@
 		</div>
 	</div>
 	<div id="adwrapper">
-		<div class="ad">
-			
-		</div>
-		<div class="ad">
-			
-		</div>
-		<div class="ad">
-			<a class="hide" href="http://www.solutionsbridal.com/blog/"><img src="images/visitourblogad.jpg" /></a>
-		</div>
+		<?php include('includes/ads.php'); ?>
 	</div>
 	<div id="footer">
 		<p>Winter Park P: 407.647.8666 330 W. Fairbanks Ave. Winter Park, FL 32789 | Gainesville P: 352.367.0070 6450 SW Archer Rd. Suite 230 Gainesville, FL 32608</p>

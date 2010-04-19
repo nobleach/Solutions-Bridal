@@ -1,11 +1,16 @@
-create delete pages for all records. --think this is done.
-make sure all images are deleted when a user deletes a record --think it's done.
+
 press page
-finish staff page
+press piece upload page
+press database stuff
+sale gowns page
+sale gowns upload info
+sale gowns upload pics
+salons pages
 measurements page
 fix <title> tags on all pages --work in progress
 integrate photo album viewer (http://devkick.com/lab/galleria/)
-ads integration on all pages
-ad uploader
-quotes on each page
-quote edit page
+remove "view measurements on all admin pages"
+Events page: "Expo" had a different image than "Trunk Show". I can get the expo image to you if you need it again.
+Change "newsletter" to Email Brides.
+The newsletter link in the admin section: that's more of an email thing. they want to email brides to tell them when their appointment has been scheduled. They just want a graphic to it --so that's why we consider it a newsletter. {i guess they would refer to it more as an 'email to brides'}
+But i'll let them know that it's titled "newsletter". They know this part will take more time after the site is done.

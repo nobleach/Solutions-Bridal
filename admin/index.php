@@ -85,7 +85,6 @@
 				<div id="ad2_box"></div>
 				<img src="images/front_page.jpg" />
 				<a id="events_link" href="edit_events.php">Edit Events</a> |
-				<a id="fp_pic_link" href="edit_fp_pic.php">Edit Frontpage Pic</a> |
 				<a id="ad1_link" href="edit_ad1.php">Edit Ad 1</a> |
 				<a id="ad2_link" href="edit_ad2.php">Edit Ad 2</a>
 			</div>
