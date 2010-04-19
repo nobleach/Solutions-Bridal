@@ -5,6 +5,9 @@
 	$designer_query = "SELECT col_id, col_name FROM sbwd.collections WHERE col_type = '$col_type'";
 	$designer_rs = mysql_query($designer_query, $conn) or die(mysql_error());
 	$designer_record = mysql_fetch_assoc($designer_rs);
+	
+	$q = "SELECT * FROM quotes";
+	$s = mysql_query($q, $conn);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -13,10 +16,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="scripts/paginator.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
-	
+	<link rel="stylesheet" href="css/fontstyle.css" type="text/css" charset="utf-8">
 	<link rel="stylesheet" media="all" type="text/css" href="css/dropdown.css" />
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
@@ -24,7 +27,12 @@
 	<title>Solutions Bridal - <?php echo $col_type; ?> Collections</title>
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
-			$('(#submenuitems li').hover(function(e){
+			$('#bride_quote').cycle({
+				speed: 2000,
+				timeout: 5000,
+				cleartype: 1
+			});
+			$('#submenuitems li').hover(function(e){
 				var id = $(this).attr("id");
 				var url ='designer_info_pump.php?col_id=';
 				
@@ -49,6 +57,14 @@
 	<div id="wrapper">
 		<div id="main">
 			<img src="images/sbheaderlogo.jpg" />
+			<div id="bride_quote">
+				<?php while($a = mysql_fetch_assoc($s)) { ?>
+					<div>
+						<p class="pretty"><?php echo $a['q_body']; ?></p>
+						<p class="quote_person"><?php echo $a['q_sig']; ?></p>
+					</div>
+				<?php } ?>
+			</div>
 			<div class="menu">
 				<?php
 					include('includes/menu.php');
@@ -85,7 +101,7 @@
 			
 		</div>
 		<div class="ad">
-			<img src="images/visitourblogad.jpg">
+			<a class="hide" href="http://www.solutionsbridal.com/blog/"><img src="images/visitourblogad.jpg" /></a>
 		</div>
 	</div>
 	<div id="footer">

@@ -3,6 +3,9 @@
 	$conn = dbConnect('admin');
 	$events_query = "SELECT * FROM events WHERE event_type = 'trunkshow'";
 	$events_rs = mysql_query($events_query, $conn) or die(mysql_error());
+	
+	$q = "SELECT * FROM quotes";
+	$s = mysql_query($q, $conn);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -23,14 +26,31 @@
 		p.style1 {font: 16px 'TeXGyrePagellaRegular', Arial, sans-serif; color:#fff; }
 	</style>
 	<title>Solutions Bridal</title>
-	
+	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#bride_quote').cycle({
+			speed: 2000,
+			timeout: 5000,
+			cleartype: 1
+		});
+	})	
+	</script>
 </head>
 
 <body>
 	<div id="wrapper">
 		<div id="main">
 			<img src="images/sbheaderlogo.jpg" />
-			
+			<div id="bride_quote">
+				<?php while($a = mysql_fetch_assoc($s)) { ?>
+					<div>
+						<p class="pretty"><?php echo $a['q_body']; ?></p>
+						<p class="quote_person"><?php echo $a['q_sig']; ?></p>
+					</div>
+				<?php } ?>
+			</div>
 			<div class="menu">
 				<?php
 					include('includes/menu.php');
@@ -67,7 +87,7 @@
 			
 		</div>
 		<div class="ad">
-			
+			<a class="hide" href="http://www.solutionsbridal.com/blog/"><img src="images/visitourblogad.jpg" /></a>
 		</div>
 	</div>
 	<div id="footer">

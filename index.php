@@ -38,7 +38,7 @@
 			cleartype: 1
 		});
 	})	
-</script>
+	</script>
 </head>
 
 <body>
@@ -158,7 +158,7 @@
 			
 		</div>
 		<div class="ad">
-			
+			<a class="hide" href="http://www.solutionsbridal.com/blog/"><img src="images/visitourblogad.jpg" /></a>
 		</div>
 	</div>
 	<div id="footer">

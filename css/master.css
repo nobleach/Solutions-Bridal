@@ -107,6 +107,7 @@ div#infodiv .photothumb:hover {
 	color:#e6d7b4;
 }
 img.fpimage {
+	clear:both;
 	float:right;
 	/*position:absolute;
 		right:0px;*/

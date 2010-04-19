@@ -1,7 +1,7 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$col_id = $_GET['col_id'];
-	$conn = dbConnect('admin');
+	$conn = dbConnect('query');
 	$info_query = "SELECT col_id, col_name, col_desc FROM collections WHERE col_id = $col_id";
 	$info_rs = mysql_query($info_query, $conn) or die(mysql_error());
 	$info_record = mysql_fetch_assoc($info_rs);

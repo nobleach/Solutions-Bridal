@@ -1,8 +1,12 @@
 <?php
 function dbConnect($type) {
-  if ($type == 'admin') {
-    $user = 'sb_admin';
-	$pwd = 'ur3133t';
+  if ($type == 'query') {
+    	$user = 'sb_view';
+		$pwd = 'viewonly';
+	} 
+	elseif ($type == 'admin') {
+		$user = 'sb_admin';
+		$pwd = 'ur3133t';
 	} else {
 		exit('Unrecognized connection type');
 	}
