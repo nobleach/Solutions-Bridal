@@ -194,6 +194,14 @@ div#infonails p.galdescription {
 div#infonails .galthumb {
 	margin-left:3px;
 }
+div#infonails #galthumbs {
+	position:absolute;
+	margin-left:12px;
+	width:190px;
+	height:210px;
+	top:307px;
+	overflow:hidden;
+}
 div#infoimg {
 	float:left;
 	border: 1px solid #949390;
