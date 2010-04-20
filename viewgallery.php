@@ -83,7 +83,7 @@
 	.caption{font-style:italic;color:#887;}
 	.demo{position:relative;margin-top:2em;}
 	.gallery_demo{width:702px;margin:0 auto;}
-	.gallery_demo li{width:68px;height:50px;border:3px double #111;margin: 0 2px;background:#000;}
+	.gallery_demo li{width:68px;height:50px;border:1px solid #fff;margin: 4px;background:#000;}
 	.gallery_demo li div{left:240px}
 	.gallery_demo li div .caption{font:italic 0.7em/1.4 georgia,serif;}
 	
