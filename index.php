@@ -69,7 +69,7 @@
 							<li><a href="ourstaff.php">CONSULTANTS</a></li>
 							<li><a href="faqs.php">FAQ</a></li>
 							<li><a href="photoshoots.php">PHOTOSHOOTS</a></li>
-							<li><a href="#">PRESS</a></li>
+							<li><a href="press.php">PRESS</a></li>
 						</ul>
 						<!--[if lte IE 6]>
 						</td></tr></table>
