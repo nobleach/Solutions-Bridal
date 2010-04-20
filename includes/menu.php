@@ -68,5 +68,5 @@
 		<![endif]-->
 	</li>
 	<li><a class="hide" href="http://www.solutionsbridal.com/blog/">BLOG</a></li>
-	<li><a class="hide" href="#">SALE GOWNS</a></li>
+	<li><a class="hide" href="salegowns.php">SALE GOWNS</a></li>
 </ul>

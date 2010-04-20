@@ -52,7 +52,7 @@
 					</div>
 				<?php } ?>
 			</div>
-			<a href="#"><img id="salegown" src="images/salegowns.png" /></a>
+			<a href="salegowns.php"><img id="salegown" src="images/salegowns.png" /></a>
 			<div class="menu">
 				<ul>
 					<li><a class="hide" href="index.php">HOME</a>
@@ -124,7 +124,7 @@
 						<![endif]-->
 					</li>
 					<li><a class="hide" href="http://www.solutionsbridal.com/blog/">BLOG</a></li>
-					<li><a class="hide" href="#">SALE GOWNS</a></li>
+					<li><a class="hide" href="salegowns.php">SALE GOWNS</a></li>
 				</ul>
 			</div>
 			<div id="overlay">

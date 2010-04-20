@@ -7,7 +7,7 @@ if ($_FILES['Filedata']['error'] == 0) {
 	// shoehorned code:
 	$tmp_name = $_FILES["Filedata"]["tmp_name"];
 	$rndName = mt_rand().mt_rand().".jpg";
-	$thName = $fsName = "ad_" . $rndName;
+	$thName = $fsName = "p_" . $rndName;
 	$name = $_FILES["Filedata"]["name"];
 	$fsDir = "../press/";
 	$thDir = "../press/thumbs/";
