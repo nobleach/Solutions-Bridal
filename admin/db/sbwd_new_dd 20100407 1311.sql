@@ -194,12 +194,7 @@ CREATE TABLE  `sbwd`.`photoshoot_photos` (
 LOCK TABLES `photoshoot_photos` WRITE;
 INSERT INTO `sbwd`.`photoshoot_photos` VALUES  (1,1,'sb_179248237324931846.jpg'),
  (2,1,'sb_10699900231561218480.jpg'),
- (3,1,'sb_13074050721646821013.jpg'),
- (4,1,'sb_20499726681743605304.jpg'),
- (5,1,'sb_12275783098834968.jpg'),
- (6,1,'sb_11352201696835444.jpg'),
- (7,1,'sb_32897137678288828.jpg'),
- (8,1,'sb_13621221771237836134.jpg');
+ (3,1,'sb_13074050721646821013.jpg');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `photoshoot_photos` ENABLE KEYS */;
 
@@ -223,7 +218,7 @@ CREATE TABLE  `sbwd`.`photoshoots` (
 
 /*!40000 ALTER TABLE `photoshoots` DISABLE KEYS */;
 LOCK TABLES `photoshoots` WRITE;
-INSERT INTO `sbwd`.`photoshoots` VALUES  (1,'test','th_sb_13074050721646821013.jpg','test2');
+INSERT INTO `sbwd`.`photoshoots` VALUES  (1,'test','th_sb_13074050721646821013.jpg','Charles De Gaul');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `photoshoots` ENABLE KEYS */;
 
@@ -291,7 +286,7 @@ CREATE TABLE  `sbwd`.`salegowns` (
   `gown_designer` varchar(120) DEFAULT NULL,
   `gown_img` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`gown_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `sbwd`.`salegowns`
@@ -299,7 +294,8 @@ CREATE TABLE  `sbwd`.`salegowns` (
 
 /*!40000 ALTER TABLE `salegowns` DISABLE KEYS */;
 LOCK TABLES `salegowns` WRITE;
-INSERT INTO `sbwd`.`salegowns` VALUES  (1,'Turtle Neck Mormon','Lovely for extreme winters or for those that just don\'t like to breath.','Vendeta Wang','g_1213684167130459166.jpg');
+INSERT INTO `sbwd`.`salegowns` VALUES  (7,'Temporary One','This one was found on the floor with no tags and no one would take ownership of it. It\'s not pretty but it\'ll get the job done.','','g_110616776245778767.jpg'),
+ (6,'Turtle Neck Mormon','For those that really hate breathing, this luxurious flowing gown will trip you all over the aisle.','Vendeta Wang','g_14158014371662789482.jpg');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `salegowns` ENABLE KEYS */;
 
