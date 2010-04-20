@@ -81,7 +81,7 @@
 				</tr>
 				<?php while($d_record = mysql_fetch_assoc($d_rs)) { ?>
 				<tr>
-					<td><img src="../press/thumbs/<?php echo $d_record['press_img']; ?>" /></td>
+					<td><img src="../salegowns/thumbs/<?php echo $d_record['gown_img']; ?>" /></td>
 					<td><?php echo $d_record['gown_id']; ?></td>
 					<td><?php echo $d_record['gown_name']; ?></td>
 					<td><?php echo substr($d_record['gown_desc'], 0, 40); ?></td>

@@ -1,7 +1,7 @@
 -- MySQL Administrator dump 1.4
 --
 -- ------------------------------------------------------
--- Server version	5.1.36-community-log
+-- Server version	5.1.37
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -22,11 +22,11 @@ CREATE DATABASE IF NOT EXISTS sbwd;
 USE sbwd;
 
 --
--- Definition of table `admins`
+-- Definition of table `sbwd`.`admins`
 --
 
-DROP TABLE IF EXISTS `admins`;
-CREATE TABLE `admins` (
+DROP TABLE IF EXISTS `sbwd`.`admins`;
+CREATE TABLE  `sbwd`.`admins` (
   `admin_id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(30) NOT NULL,
   `password` varchar(150) NOT NULL,
@@ -34,21 +34,46 @@ CREATE TABLE `admins` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `admins`
+-- Dumping data for table `sbwd`.`admins`
 --
 
 /*!40000 ALTER TABLE `admins` DISABLE KEYS */;
-INSERT INTO `admins` (`admin_id`,`username`,`password`) VALUES 
- (1,'jim','ee76bae37306a745dfc3afc4f6f6f1fc403d5bb5');
+LOCK TABLES `admins` WRITE;
+INSERT INTO `sbwd`.`admins` VALUES  (1,'jim','ee76bae37306a745dfc3afc4f6f6f1fc403d5bb5');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `admins` ENABLE KEYS */;
 
 
 --
--- Definition of table `collection_photos`
+-- Definition of table `sbwd`.`ads`
 --
 
-DROP TABLE IF EXISTS `collection_photos`;
-CREATE TABLE `collection_photos` (
+DROP TABLE IF EXISTS `sbwd`.`ads`;
+CREATE TABLE  `sbwd`.`ads` (
+  `ad_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ad_img` varchar(120) NOT NULL,
+  `ad_link` varchar(120) DEFAULT NULL,
+  PRIMARY KEY (`ad_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sbwd`.`ads`
+--
+
+/*!40000 ALTER TABLE `ads` DISABLE KEYS */;
+LOCK TABLES `ads` WRITE;
+INSERT INTO `sbwd`.`ads` VALUES  (1,'fpo_ad.jpg','http://testlink.com'),
+ (2,'ad_240544825965083569.jpg','http://supersite.com');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `ads` ENABLE KEYS */;
+
+
+--
+-- Definition of table `sbwd`.`collection_photos`
+--
+
+DROP TABLE IF EXISTS `sbwd`.`collection_photos`;
+CREATE TABLE  `sbwd`.`collection_photos` (
   `cphoto_id` int(11) NOT NULL AUTO_INCREMENT,
   `col_id` int(11) NOT NULL,
   `cphoto_url` varchar(120) NOT NULL,
@@ -56,12 +81,12 @@ CREATE TABLE `collection_photos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `collection_photos`
+-- Dumping data for table `sbwd`.`collection_photos`
 --
 
 /*!40000 ALTER TABLE `collection_photos` DISABLE KEYS */;
-INSERT INTO `collection_photos` (`cphoto_id`,`col_id`,`cphoto_url`) VALUES 
- (10,2,'sb_6606946691426052205.jpg'),
+LOCK TABLES `collection_photos` WRITE;
+INSERT INTO `sbwd`.`collection_photos` VALUES  (10,2,'sb_6606946691426052205.jpg'),
  (11,2,'sb_10368988741516462107.jpg'),
  (12,2,'sb_605355025318415875.jpg'),
  (13,2,'sb_986485475500242715.jpg'),
@@ -78,15 +103,16 @@ INSERT INTO `collection_photos` (`cphoto_id`,`col_id`,`cphoto_url`) VALUES
  (26,6,'sb_3432471831673185568.jpg'),
  (27,6,'sb_679108206396178539.jpg'),
  (28,6,'sb_9272283591583342956.jpg');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `collection_photos` ENABLE KEYS */;
 
 
 --
--- Definition of table `collections`
+-- Definition of table `sbwd`.`collections`
 --
 
-DROP TABLE IF EXISTS `collections`;
-CREATE TABLE `collections` (
+DROP TABLE IF EXISTS `sbwd`.`collections`;
+CREATE TABLE  `sbwd`.`collections` (
   `col_id` int(11) NOT NULL AUTO_INCREMENT,
   `col_type` varchar(50) NOT NULL,
   `col_name` varchar(120) NOT NULL,
@@ -95,12 +121,12 @@ CREATE TABLE `collections` (
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `collections`
+-- Dumping data for table `sbwd`.`collections`
 --
 
 /*!40000 ALTER TABLE `collections` DISABLE KEYS */;
-INSERT INTO `collections` (`col_id`,`col_type`,`col_name`,`col_desc`) VALUES 
- (1,'bridal','Jasmine','																																The Jasmine collection has prided itself in innovation and design sine 1985. They provide two lines of dresses: Jasmine Couture and Jasmine Collection. With both these lines, Jasmine hopes to satisfy any bride. Their designs are constructed by individual seamstresses and feature hand-sewn beadwork and trim. With a commitment to great customer service and satisfaction, Jasmine is extremely flexible in making almost any changes to their dresses. Jasmine creates the perfect gown for the high fashion bride.																																			'),
+LOCK TABLES `collections` WRITE;
+INSERT INTO `sbwd`.`collections` VALUES  (1,'bridal','Jasmine','																																The Jasmine collection has prided itself in innovation and design sine 1985. They provide two lines of dresses: Jasmine Couture and Jasmine Collection. With both these lines, Jasmine hopes to satisfy any bride. Their designs are constructed by individual seamstresses and feature hand-sewn beadwork and trim. With a commitment to great customer service and satisfaction, Jasmine is extremely flexible in making almost any changes to their dresses. Jasmine creates the perfect gown for the high fashion bride.																																			'),
  (2,'bridal','Watters & Watters','Influenced by the fashion forward looks of New York and Milan, Vatana Watters has a modern vision for glamorous yet simple bridal gowns. Consisting of two lines, Watters and WTOO, these gowns feature clean lines with detail in fabric instead of heavy embroidery. Combining the best luxury fabrics with clever designs, a Watters gown is perfect for a simplistic bride. 																					'),
  (3,'bridal','Justina McCaffrey','Graduating from the Fashion Institute of LA in 1985, McCaffrey has become a household name in the North American bridal market. After creating her own wedding dress, McCaffrey began her start in the industry with friends and relatives requesting her designs. With gowns showing off their elegance, delicacy, and originality, the McCaffrey label has a distinctive look. With gowns that stand for something timeless with a hint of nostalgia to the classics, a McCaffrey gown is perfect for the graceful bride. 														'),
  (4,'bridal','Marisa','Marisa, founded in 1988, offers contemporary gowns with understated elegance. With an emphasis on body shaping instead of overdone detail, Marisa gowns are known for their stunning silhouettes.  These high-quality yet affordable gowns with pure silks are perfect for the fashionable bride. 														'),
@@ -115,16 +141,17 @@ INSERT INTO `collections` (`col_id`,`col_type`,`col_name`,`col_desc`) VALUES
  (13,'ATTENDANTS','Watters & Watters',''),
  (14,'ATTENDANTS','The Dessy Group','Coming Soon.'),
  (15,'ATTENDANTS','Lazaro',NULL),
- (16,'ATTENDANTS','Bill Levkoff',NULL);
+ (16,'ATTENDANTS','Bill Levkoff','															');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `collections` ENABLE KEYS */;
 
 
 --
--- Definition of table `events`
+-- Definition of table `sbwd`.`events`
 --
 
-DROP TABLE IF EXISTS `events`;
-CREATE TABLE `events` (
+DROP TABLE IF EXISTS `sbwd`.`events`;
+CREATE TABLE  `sbwd`.`events` (
   `event_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `event_h1` varchar(120) NOT NULL,
   `event_h2` varchar(120) DEFAULT NULL,
@@ -133,24 +160,26 @@ CREATE TABLE `events` (
   `event_time` varchar(45) DEFAULT NULL,
   `event_place` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`event_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `events`
+-- Dumping data for table `sbwd`.`events`
 --
 
 /*!40000 ALTER TABLE `events` DISABLE KEYS */;
-INSERT INTO `events` (`event_id`,`event_h1`,`event_h2`,`event_type`,`event_date`,`event_time`,`event_place`) VALUES 
- (1,'Ghetto Fab','TRUNK SHOW','trunkshow','04/21/2010','4:30pm - Midnight','Le Plaza');
+LOCK TABLES `events` WRITE;
+INSERT INTO `sbwd`.`events` VALUES  (1,'Ghetto Fab','TRUNK SHOW','trunkshow','04/21/2010','4:30pm - Midnight','Le Plaza'),
+ (3,'TEST HEADLINE','EXPO','expo','04/27/2010','12pm - 2pm','The Hilton');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 
 
 --
--- Definition of table `photoshoot_photos`
+-- Definition of table `sbwd`.`photoshoot_photos`
 --
 
-DROP TABLE IF EXISTS `photoshoot_photos`;
-CREATE TABLE `photoshoot_photos` (
+DROP TABLE IF EXISTS `sbwd`.`photoshoot_photos`;
+CREATE TABLE  `sbwd`.`photoshoot_photos` (
   `photo_id` int(11) NOT NULL AUTO_INCREMENT,
   `ps_id` int(11) NOT NULL,
   `photo_url` varchar(120) NOT NULL,
@@ -158,28 +187,29 @@ CREATE TABLE `photoshoot_photos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `photoshoot_photos`
+-- Dumping data for table `sbwd`.`photoshoot_photos`
 --
 
 /*!40000 ALTER TABLE `photoshoot_photos` DISABLE KEYS */;
-INSERT INTO `photoshoot_photos` (`photo_id`,`ps_id`,`photo_url`) VALUES 
- (1,1,'sb_9090030891457632807.jpg'),
- (2,1,'sb_12395665554045082.jpg'),
- (3,1,'sb_7054425312038505960.jpg'),
+LOCK TABLES `photoshoot_photos` WRITE;
+INSERT INTO `sbwd`.`photoshoot_photos` VALUES  (1,1,'sb_179248237324931846.jpg'),
+ (2,1,'sb_10699900231561218480.jpg'),
+ (3,1,'sb_13074050721646821013.jpg'),
  (4,1,'sb_20499726681743605304.jpg'),
  (5,1,'sb_12275783098834968.jpg'),
  (6,1,'sb_11352201696835444.jpg'),
  (7,1,'sb_32897137678288828.jpg'),
  (8,1,'sb_13621221771237836134.jpg');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `photoshoot_photos` ENABLE KEYS */;
 
 
 --
--- Definition of table `photoshoots`
+-- Definition of table `sbwd`.`photoshoots`
 --
 
-DROP TABLE IF EXISTS `photoshoots`;
-CREATE TABLE `photoshoots` (
+DROP TABLE IF EXISTS `sbwd`.`photoshoots`;
+CREATE TABLE  `sbwd`.`photoshoots` (
   `ps_id` int(11) NOT NULL AUTO_INCREMENT,
   `ps_name` varchar(50) NOT NULL,
   `ps_thumb` varchar(120) DEFAULT NULL,
@@ -188,53 +218,90 @@ CREATE TABLE `photoshoots` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `photoshoots`
+-- Dumping data for table `sbwd`.`photoshoots`
 --
 
 /*!40000 ALTER TABLE `photoshoots` DISABLE KEYS */;
-INSERT INTO `photoshoots` (`ps_id`,`ps_name`,`ps_thumb`,`ps_photographer`) VALUES 
- (1,'test','th_sb_32897137678288828.jpg','test2');
+LOCK TABLES `photoshoots` WRITE;
+INSERT INTO `sbwd`.`photoshoots` VALUES  (1,'test','th_sb_13074050721646821013.jpg','test2');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `photoshoots` ENABLE KEYS */;
 
 
 --
--- Definition of table `press`
+-- Definition of table `sbwd`.`press`
 --
 
-DROP TABLE IF EXISTS `press`;
-CREATE TABLE `press` (
+DROP TABLE IF EXISTS `sbwd`.`press`;
+CREATE TABLE  `sbwd`.`press` (
   `press_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `press_name` varchar(120) NOT NULL,
   `press_desc` text,
+  `press_img` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`press_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `press`
+-- Dumping data for table `sbwd`.`press`
 --
 
 /*!40000 ALTER TABLE `press` DISABLE KEYS */;
+LOCK TABLES `press` WRITE;
+INSERT INTO `sbwd`.`press` VALUES  (2,'test2','This was an excerpt from a beautiful little spread we did in Bridal Outdoorswomen Monthly. Pg 31-39.																											','ad_796748325797647573.jpg'),
+ (4,'test1','Another delightful spread from Urban box headed brides.','ad_9408271411091678435.jpg'),
+ (5,'test3','Beautiful long text listing to see how it will flow on the page.','ad_19159833331381028829.jpg'),
+ (6,'test','another test to see how it\'ll flow... notice I put an apostrophe in there....','ad_244989030156534307.jpg');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `press` ENABLE KEYS */;
 
 
 --
--- Definition of table `quotes`
+-- Definition of table `sbwd`.`quotes`
 --
 
-DROP TABLE IF EXISTS `quotes`;
-CREATE TABLE `quotes` (
+DROP TABLE IF EXISTS `sbwd`.`quotes`;
+CREATE TABLE  `sbwd`.`quotes` (
   `q_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `q_body` text NOT NULL,
   `q_sig` varchar(120) NOT NULL,
   PRIMARY KEY (`q_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `quotes`
+-- Dumping data for table `sbwd`.`quotes`
 --
 
 /*!40000 ALTER TABLE `quotes` DISABLE KEYS */;
+LOCK TABLES `quotes` WRITE;
+INSERT INTO `sbwd`.`quotes` VALUES  (1,'\"It was the most beautiful day of my life.\"		\r\n							','-Sara, brand new bride'),
+ (2,'								\"Such a gorgeous experience....\"								\r\n														','-Delia, 9th time bride');
+UNLOCK TABLES;
 /*!40000 ALTER TABLE `quotes` ENABLE KEYS */;
+
+
+--
+-- Definition of table `sbwd`.`salegowns`
+--
+
+DROP TABLE IF EXISTS `sbwd`.`salegowns`;
+CREATE TABLE  `sbwd`.`salegowns` (
+  `gown_id` int(11) NOT NULL AUTO_INCREMENT,
+  `gown_name` varchar(60) DEFAULT NULL,
+  `gown_desc` text,
+  `gown_designer` varchar(120) DEFAULT NULL,
+  `gown_img` varchar(120) DEFAULT NULL,
+  PRIMARY KEY (`gown_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sbwd`.`salegowns`
+--
+
+/*!40000 ALTER TABLE `salegowns` DISABLE KEYS */;
+LOCK TABLES `salegowns` WRITE;
+INSERT INTO `sbwd`.`salegowns` VALUES  (1,'Turtle Neck Mormon','Lovely for extreme winters or for those that just don\'t like to breath.','Vendeta Wang','g_1213684167130459166.jpg');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `salegowns` ENABLE KEYS */;
 
 
 
