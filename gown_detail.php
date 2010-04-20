@@ -1,9 +1,10 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('query');
-	$sg_query = "SELECT * FROM salegowns";
+	$gown_id = $_GET['gown_id'];
+	$sg_query = "SELECT * FROM salegowns WHERE gown_id = $gown_id";
 	$sg_rs = mysql_query($sg_query, $conn) or die(mysql_error());
-	
+	$sg_record = mysql_fetch_object($sg_rs);
 	$q = "SELECT * FROM quotes";
 	$s = mysql_query($q, $conn);
 ?>
@@ -14,7 +15,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="scripts/paginator.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
@@ -29,35 +29,36 @@
 			width:100%;
 			height:391px;
 		}
-		div#thumbholder {
+		.fullsizeimg {
+			margin:10px;
+			border:solid 1px #fff;
+		}
+		#details {
 			position:absolute;
-			left:400px;
-			top:140px;
-			width:380px;
+			top:136px;
+			left:520px;
+			width:260px;
 			height:300px;
-			/*border: thin red solid;*/
-		}
-		.thumbnail {
-			float:left;
-			max-width:108px;
-			margin:3px;
-			text-decoration:none;
-		}
-		.thumbnail p {
-			clear:both;
-			float:left;
-			font-size: 11px;
 			color:#fff;
-			margin-left:3px;
+			font-family:"Times New Roman", Times, serif;
 		}
-		img.thumbimg {
-			border: 1px #fff solid;
-			float:left;
+		h1.designername {
+			font-size:21px;
+			font-weight:normal;
+			color:#ccc799;
+			margin:4px;
+
 		}
-		.paginator {
+		p.description {
+			font-size:13px;
+			margin:4px;
+		}
+		a#back {
 			position:absolute;
-			top:460px;
-			left:620px;
+			left:630px;
+			top:470px;
+			color:#ddd;
+			font-size:14px;
 		}
 	</style>
 	<title>Solutions Bridal - Sale Gowns</title>
@@ -68,7 +69,6 @@
 				timeout: 5000,
 				cleartype: 1
 			});
-			$(function () {  $("#thumbholder").pagination();  });
 		})
 	</script>
 </head>
@@ -91,14 +91,16 @@
 				?>
 			</div>
 			<div id="fpStatic">
-				<div id="thumbholder">
-					<?php while($sg_record = mysql_fetch_assoc($sg_rs)) { ?>
-						<a class="thumbnail" href="gown_detail.php?gown_id=<?php echo $sg_record['gown_id']; ?>">
-							<img class="thumbimg" src="salegowns/thumbs/<?php echo $sg_record['gown_img']; ?>" />
-							<p><?php echo $sg_record['gown_name']; ?></p>
-						</a>
-					<?php } ?>
+				<img class="fullsizeimg" src="salegowns/<?php echo $sg_record->gown_img; ?>" />
+				<div id="details">
+					<h1 class="designername">
+						<?php echo $sg_record->gown_name; ?>
+					</h1>
+					<p class="description">
+						<?php echo $sg_record->gown_desc; ?>
+					</p>	
 				</div>
+				<a id="back" href="salegowns.php">&laquo; Back to Sale Gowns</a>
 			</div>
 		</div>
 		</div>

@@ -13,12 +13,12 @@ if ($_FILES['Filedata']['error'] == 0) {
 	$thDir = "../salegowns/thumbs/";
 	$quality = 85;
 	//$maxFSWidth = 626;
-	$maxFSHeight = 391;
+	$maxFSHeight = 368;
 	//maxTHWidth = 120;
 	$maxTHHeight = 80;
 	list($width, $height) = getimagesize($tmp_name);
 	$newFsWidth = $maxFSHeight/$height * $width;
-	$newFsHeight = 391;
+	$newFsHeight = 368;
 	$newThWidth = $maxTHHeight/$height * $width;
 	$newThHeight = $maxTHHeight;
 	//create the FS image
@@ -45,7 +45,7 @@ if(isset($_POST['gown_id'])) {
 		$gown_img = $fsName;
 		$sql = "UPDATE salegowns SET gown_name = '$gown_name', gown_desc = '$gown_desc', gown_designer = '$gown_designer', gown_img = '$gown_img' WHERE gown_id = $gown_id";
 	} else {
-		$sql = "UPDATE salegowns SET gown_name = '$gown_name', gown_desc = '$gown_desc' gown_designer = '$gown_designer', WHERE gown_id = $gown_id";
+		$sql = "UPDATE salegowns SET gown_name = '$gown_name', gown_desc = '$gown_desc', gown_designer = '$gown_designer' WHERE gown_id = $gown_id";
 	}
 	
 } else {
