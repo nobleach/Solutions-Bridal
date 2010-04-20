@@ -6,7 +6,7 @@
 	}
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$d_query = 'SELECT * FROM salegowns';
+	$d_query = 'SELECT * FROM salegowns ORDER BY gown_id ASC';
 	$d_rs = mysql_query($d_query, $conn) or die(mysql_error());
 ?>
 <!DOCTYPE HTML>

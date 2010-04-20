@@ -42,7 +42,7 @@
 			color:#fff;
 			font-family:"Times New Roman", Times, serif;
 		}
-		h1.designername {
+		h1.gownname {
 			font-size:21px;
 			font-weight:normal;
 			color:#ccc799;
@@ -52,6 +52,12 @@
 		p.description {
 			font-size:13px;
 			margin:4px;
+		}
+		p.designername {
+			float:right;
+			margin-right:22px;
+			margin-top:22px;
+			font-style:italic;
 		}
 		a#back {
 			position:absolute;
@@ -93,11 +99,17 @@
 			<div id="fpStatic">
 				<img class="fullsizeimg" src="salegowns/<?php echo $sg_record->gown_img; ?>" />
 				<div id="details">
-					<h1 class="designername">
+					<h1 class="gownname">
 						<?php echo $sg_record->gown_name; ?>
 					</h1>
 					<p class="description">
 						<?php echo $sg_record->gown_desc; ?>
+					</p>
+					<p class="designername">
+						<?php if($sg_record->gown_designer) {
+								echo 'Designed by: ' . $sg_record->gown_designer; 
+							  }
+						?>
 					</p>	
 				</div>
 				<a id="back" href="salegowns.php">&laquo; Back to Sale Gowns</a>

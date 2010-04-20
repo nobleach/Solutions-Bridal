@@ -1,5 +1,3 @@
 need to mysql_real_escape_string all text area inputs. -- In PROGRESS
-sale gowns page
 fix <title> tags on all pages --work in progress
-integrate photo album viewer (http://devkick.com/lab/galleria/) for sale gowns
-find way for photographer's name to come up when thumbnail is mouseovered.
+

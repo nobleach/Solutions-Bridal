@@ -2,7 +2,7 @@
 	require_once('includes/conn_mysql.inc.php');
 	//connect to DB:
 	$conn = dbConnect('admin');
-	$ps_query = "SELECT * FROM photoshoots";
+	$ps_query = "SELECT * FROM photoshoots ORDER BY ps_id ASC";
 	$ps_rs = mysql_query($ps_query, $conn) or die(mysql_error());
 	
 	$q = "SELECT * FROM quotes";
@@ -32,12 +32,30 @@
 				timeout: 5000,
 				cleartype: 1
 			});
+			$('#thumbholder a').hover(function() {
+				var id = $(this).attr("id");
+				var url ='photographer_pump.php?ps_id=';
+				$('#photographer').load(url+id).fadeIn('fast');
+			}, function(){
+				$('#photographer').fadeOut('fast');
+			})
 		})
 		$(function () {  $("#thumbholder").pagination();  });
 	</script>
 	<style type="text/css" media="screen">
 		div#thumbholder {
 			width:380px;
+			height:160px;
+		}
+		h3#photographer {
+			display:none;
+			position:absolute;
+			width:380px;
+			margin-top:7px;
+			font-size:16px;
+			color:#ddd;
+			font-weight:normal;
+			font-style:italic;
 		}
 	</style>
 	
@@ -62,13 +80,14 @@
 			</div>
 			<div id="infodiv" style="top:220px">
 				<h1><img src="images/photoshootsh1.png" /></h1>
-				<?php while($ps_record = mysql_fetch_assoc($ps_rs)) { ?>
-					<div id="thumbholder">
-						<a href="viewgallery.php?ps_id=<?php echo $ps_record['ps_id']; ?>"> 
+				<div id="thumbholder">
+					<?php while($ps_record = mysql_fetch_assoc($ps_rs)) { ?>	
+						<a id="<?php echo $ps_record['ps_id']; ?>" href="viewgallery.php?ps_id=<?php echo $ps_record['ps_id']; ?>"> 
 							<img class="photothumb" src="photoshoots/<?php echo $ps_record['ps_thumb']; ?>">
 						</a>
-					</div>	
-				<?php } ?>
+					<?php } ?>
+				</div>
+				<h3 id="photographer"></h3>	
 			</div>
 			<img class="fpimage" src="images/fpphotoshoots.jpg" />
 		</div>	

@@ -1,7 +1,7 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('query');
-	$sg_query = "SELECT * FROM salegowns";
+	$sg_query = "SELECT * FROM salegowns ORDER BY gown_id ASC";
 	$sg_rs = mysql_query($sg_query, $conn) or die(mysql_error());
 	
 	$q = "SELECT * FROM quotes";
