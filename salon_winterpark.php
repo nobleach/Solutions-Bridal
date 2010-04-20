@@ -49,7 +49,7 @@
 					include('includes/menu.php');
 				?>
 			</div>
-			<div id="infodiv" style="top:220px;">
+			<div id="infodiv" style="top:300px;">
 				<h1><img src="images/orlandoh1.png" /></h1>
 				<p>
 						Winter Park<br />

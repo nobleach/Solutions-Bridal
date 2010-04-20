@@ -18,6 +18,7 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
+	</style>
 	<title>Solutions Bridal - Gainesville</title>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
@@ -49,7 +50,7 @@
 					include('includes/menu.php');
 				?>
 			</div>
-			<div id="infodiv" style="top:220px;">
+			<div id="infodiv" style="top:300px;">
 				<h1><img src="images/gainesvilleh1.png" /></h1>
 				<p>
 					Gainesville<br />

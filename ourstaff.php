@@ -18,6 +18,11 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
+	<style type="text/css" media="screen">
+		img.fpimage {
+			margin:10px;
+		}
+	</style>
 	<title>Solutions Bridal - Staff</title>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
@@ -49,7 +54,7 @@
 					include('includes/menu.php');
 				?>
 			</div>
-			<div id="infodiv" style="top:220px;">
+			<div id="infodiv" style="top:270px;">
 				<h1><img src="images/ourstaffh1.png" /></h1>
 				<p>
 					The Solutions Bridal team have been through extensive training to provide with best knowledge about
