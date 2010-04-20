@@ -10,11 +10,12 @@ div#wrapper {
 	margin: 0 auto;
 	margin-top:100px;
 	width:800px;
-	height:518px;
+	height:516px;
 	background: url(../images/wrapperback.jpg) repeat-y;
 	border-top: 1px solid #fff;
 	border-left: 1px solid #fff;
 	border-right: 1px solid #fff;
+	overflow:hidden;
 }
 div#main {
 	position:relative;
@@ -92,6 +93,7 @@ div#infodiv h1 {
 div#infodiv p {
 	font-family:Helvetica, Arial, serif;
 	font-size: 12px;
+	line-height:13px;
 	color:#fff;
 	margin-bottom:5px;
 }
