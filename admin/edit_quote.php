@@ -15,7 +15,7 @@
 		foreach($_POST as $key => $value) {
 			${$key} = $value;
 		}
-		$q_body = mysql_real_escape_string($q_body);
+		//$q_body = mysql_real_escape_string($q_body);
 		$insert_query = "UPDATE quotes 
 							SET q_body = '$q_body', 
 							q_sig = '$q_sig'

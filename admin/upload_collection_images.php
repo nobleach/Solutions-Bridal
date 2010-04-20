@@ -34,7 +34,7 @@
 					<li><a href="email_brides.php" title="">Email Brides</a></li>
 				</ul>
 			</div>
-			<h3 class="warning">All photos MUST be portrait.</h3>	
+			<h3 class="warning">All photos MUST be portrait (250 pixels wide by 389 pixels high).</h3>	
 			<?php while($photo_record = mysql_fetch_assoc($photo_rs)) { ?>
 				<img src="../collections/thumbs/<?php echo $photo_record['cphoto_url']; ?>" />
 				<a href="delete_collection_photo.php?col_id=<?php echo $photo_record['col_id']; ?>&cphoto_id=<?php echo $photo_record['cphoto_id']; ?>&cphoto_url=<?php echo $photo_record['cphoto_url']; ?>">Delete</a>	
