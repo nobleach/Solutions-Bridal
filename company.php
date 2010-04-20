@@ -30,7 +30,7 @@
 		});
 	})	
 	</script>
-	<title>Company</title>
+	<title>Solutions Bridal - Company</title>
 	
 </head>
 

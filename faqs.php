@@ -18,7 +18,7 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
-	<title>index</title>
+	<title>Solutions Bridal - FAQs</title>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">

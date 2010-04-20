@@ -1,7 +1,8 @@
 need to mysql_real_escape_string all text area inputs. -- In PROGRESS
-fix <title> tags on all pages --work in progress
 recreate all H1 pngs in yellow the size of the "experience" headline.
 make staff images a bit smaller and inset from the right/top.
 move text blocks down on all static pages (experience, staff, etc)
-new images for moms, flowergirls, accessories
 move text blocks DOWN for salons pages
+modify strokes and color on galleria thumbnails
+upload all images from CD for photoshoot
+put dimensions on the collections upload page: 250x389

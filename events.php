@@ -1,7 +1,7 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$events_query = "SELECT * FROM events WHERE event_type = 'events'";
+	$events_query = "SELECT * FROM events WHERE event_type = 'event'";
 	$events_rs = mysql_query($events_query, $conn) or die(mysql_error());
 	
 	$q = "SELECT * FROM quotes";
@@ -21,11 +21,11 @@
 	<![endif]-->
 	<link rel="stylesheet" href="css/fontstyle.css" type="text/css" charset="utf-8">
 	<style type="text/css" media="screen">
-		h1.fontface {font: 40px/59px 'TeXGyrePagellaRegular', Arial, sans-serif;letter-spacing: 4px; color:#e6d7b4; margin-bottom:-23px;}
-		h2.fontface {font: 25px/46px 'TeXGyrePagellaRegular', Arial, sans-serif;letter-spacing: 7px; color:#fff; border-bottom:1px solid #fff;}
+		h1.fontface {font: 40px/59px 'TeXGyrePagellaRegular', Arial, sans-serif;/*letter-spacing: 4px;*/ color:#e6d7b4; margin-bottom:-23px;}
+		h2.fontface {font: 25px/46px 'TeXGyrePagellaRegular', Arial, sans-serif;/*letter-spacing: 7px;*/ color:#fff; border-bottom:1px solid #fff;}
 		p.style1 {font: 16px 'TeXGyrePagellaRegular', Arial, sans-serif; color:#fff; }
 	</style>
-	<title>Solutions Bridal</title>
+	<title>Solutions Bridal - Events</title>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
