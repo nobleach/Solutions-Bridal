@@ -84,7 +84,7 @@
 					<td><img src="../press/thumbs/<?php echo $p_record['press_img']; ?>" /></td>
 					<td><?php echo $p_record['press_id']; ?></td>
 					<td><?php echo $p_record['press_name']; ?></td>
-					<td><?php echo $p_record['press_desc']; ?></td>
+					<td><?php echo substr($p_record['press_desc'], 0, 40); ?></td>
 					
 					<td><a href="edit_presspiece.php?press_id=<?php echo $p_record['press_id']; ?>" >Edit</a></td>
 					<td><a href="delete_presspiece.php?press_id=<?php echo $p_record['press_id']; ?>" >Delete</a></td>

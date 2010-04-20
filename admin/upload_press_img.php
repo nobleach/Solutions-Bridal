@@ -1,5 +1,5 @@
 <?php
-if (!empty($_FILES)) {
+if ($_FILES['Filedata']['error'] == 0) {
 	$tempFile = $_FILES['Filedata']['tmp_name'];
 	$targetPath = '../press';
 	$targetFile =  $targetPath . '/' . $_FILES['Filedata']['name'];
@@ -36,12 +36,19 @@ require_once('includes/conn_mysql.inc.php');
 require_once('includes/corefuncs.inc.php');
 $conn = dbConnect('admin');
 $press_name = $_POST['press_name'];
-$press_desc = $_POST['press_desc'];
-$press_img = $fsName;
+$press_desc = mysql_real_escape_string(trim($_POST['press_desc']));
+
 if(isset($_POST['press_id'])) {
 	$press_id = $_POST['press_id'];
-	$sql = "UPDATE press SET press_name = '$press_name', press_desc = '$press_desc', press_img = '$press_img' WHERE press_id = $press_id";
+	if(isset($fsName)) {
+		$press_img = $fsName;
+		$sql = "UPDATE press SET press_name = '$press_name', press_desc = '$press_desc', press_img = '$press_img' WHERE press_id = $press_id";
+	} else {
+		$sql = "UPDATE press SET press_name = '$press_name', press_desc = '$press_desc' WHERE press_id = $press_id";
+	}
+	
 } else {
+	$press_img = $fsName;
 	$sql = "INSERT INTO press SET press_name = '$press_name', press_desc = '$press_desc', press_img = '$press_img'";
 }
 

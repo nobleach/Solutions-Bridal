@@ -1,4 +1,4 @@
-
+need to mysql_real_escape_string all text area inputs.
 sale gowns page
 sale gowns upload info
 sale gowns upload pics

@@ -110,8 +110,19 @@
 		.info{text-align:left;width:700px;margin:30px auto;border-top:1px dotted #221;padding-top:30px;}
 		.info p{margin-top:1.6em;}
 		.galleria_wrapper{float:right;}
+		.galleria_container{
+			position:absolute;
+			left:270px;
+			top:125px;
+		}
+		.caption {
+			position:absolute;
+			top:400px;
+			left:5px;
+			color:#fff;
+		}
 		div#wrapper {
-			min-height:391px;
+			min-height:610px;
 		}
 		
 	</style>
@@ -140,7 +151,7 @@
 			</div>
 			<ul class="gallery_demo_unstyled">
 				<?php while($p_record = mysql_fetch_assoc($p_rs)) { ?>
-					<li><img src="press/<?php echo $p_record['press_img']; ?>" /></li>
+					<li><img src="press/<?php echo $p_record['press_img']; ?>" title="<?php echo $p_record['press_desc']; ?>" /></li>
 				<?php } ?>
 			</ul>
 		</div>	

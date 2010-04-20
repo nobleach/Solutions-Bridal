@@ -16,6 +16,7 @@
 		foreach($_POST as $key => $value) {
 			${$key} = $value;
 		}
+		//need to mysql escape string for 's
 		$insert_query = "UPDATE events 
 							SET event_type = '$event_type', 
 							event_h1 = '$event_h1', 

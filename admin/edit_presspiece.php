@@ -57,7 +57,7 @@
 						<td><p>Press Desc:</p></td>
 						<td>
 							<textarea name="press_desc" rows="8" cols="40">
-								<?php echo $press_record->press_desc; ?>
+								<?php echo trim($press_record->press_desc); ?>
 							</textarea> 
 						</td>
 					</tr>
