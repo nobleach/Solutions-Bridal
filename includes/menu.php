@@ -31,6 +31,7 @@
 			<li><a href="collections.php?col_type=ACCESSORIES">ACCESSORIES</a></li>
 			<li><a href="collections.php?col_type=MOMS">MOMS</a></li>
 			<li><a href="collections.php?col_type=FLOWERGIRLS">FLOWERGIRLS</a></li>
+			<li><a href="measurements.pdf">MEASUREMENTS</a></li>
 		</ul>
 		<!--[if lte IE 6]>
 		</td></tr></table>
