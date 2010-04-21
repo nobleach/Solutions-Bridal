@@ -14,6 +14,7 @@
 			<li><a href="faqs.php">FAQ</a></li>
 			<li><a href="photoshoots.php">PHOTOSHOOTS</a></li>
 			<li><a href="press.php">PRESS</a></li>
+			<li><a href="entertainment.php">ENTERTAINMENT</a></li>
 		</ul>
 		<!--[if lte IE 6]>
 		</td></tr></table>

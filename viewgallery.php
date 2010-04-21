@@ -96,7 +96,7 @@
 	.info p{margin-top:1.6em;}
 	
 	div#wrapper {
-		min-height:750px;
+		min-height:900px;
 	}
     </style>
 
