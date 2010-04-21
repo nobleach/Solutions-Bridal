@@ -1,3 +1,2 @@
-need to mysql_real_escape_string all text area inputs. -- In PROGRESS
 upload all images from CD for photoshoot
-put dimensions on the collections upload page: 250x389
+fix submenu on collections page to stretch
