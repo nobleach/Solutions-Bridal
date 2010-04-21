@@ -89,7 +89,7 @@
 		h1,h2{font:bold 80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
 		a{color:#348;text-decoration:none;outline:none;}
 		a:hover{color:#67a;}
-		.caption{font-style:italic;color:#887;}
+		.caption{font-size:12px;color:#887;}
 		.demo{position:relative;margin-top:2em;}
 		.gallery_demo{
 			position:absolute;
@@ -121,6 +121,7 @@
 		
 		.caption {
 			position:absolute;
+			width:450px;
 			top:400px;
 			left:5px;
 			color:#fff;

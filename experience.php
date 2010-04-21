@@ -49,7 +49,7 @@
 					include('includes/menu.php');
 				?>
 			</div>
-			<div id="infodiv" style="top:220px;">
+			<div id="infodiv" style="top:270px;">
 				<h1><img src="images/experienceh1.png" /></h1>
 				<p>
 					The Solutions Bridal experience begins from the moment our brides walk through the door. You can

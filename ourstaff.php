@@ -20,7 +20,8 @@
 	<![endif]-->
 	<style type="text/css" media="screen">
 		img.fpimage {
-			margin:10px;
+			margin-right:10px;
+			margin-top:3px;
 		}
 	</style>
 	<title>Solutions Bridal - Staff</title>
