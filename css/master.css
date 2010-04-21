@@ -129,6 +129,7 @@ div#submenu {
 	width:131px;
 	min-height:250px;
 	background:url(../images/submenuback.png);
+	padding-bottom:5px;
 }
 div#submenuheader {
 	background:url(../images/submenuheader.jpg) no-repeat;
