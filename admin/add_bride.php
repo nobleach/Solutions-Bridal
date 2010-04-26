@@ -31,12 +31,12 @@
 			<div id="styletwo">
 				<?php include('menu.php'); ?>
 			</div>	
-			<form enctype="multipart/form-data" action="upload_gown_img.php" method="post" accept-charset="utf-8">
+			<form enctype="multipart/form-data" action="upload_bride_img.php" method="post" accept-charset="utf-8">
 				<table>
 					<tr>
 						<td><p>Bride Name:</p></td>
 						<td>
-							<input type="text" name="gown_name" value="" id="gown_name">
+							<input type="text" name="bride_name" value="" id="bride_name">
 						</td>
 					</tr>
 					<tr>

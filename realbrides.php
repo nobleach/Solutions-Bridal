@@ -1,7 +1,7 @@
 <?php
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('query');
-	$sg_query = "SELECT * FROM salegowns ORDER BY gown_id ASC";
+	$sg_query = "SELECT * FROM realbrides ORDER BY bride_name ASC";
 	$sg_rs = mysql_query($sg_query, $conn) or die(mysql_error());
 	
 	$q = "SELECT * FROM quotes";
@@ -25,15 +25,21 @@
 	<![endif]-->
 	<style type="text/css" media="screen">
 		div#fpStatic {
-			background:#7f7f7f url(images/fpSaleStatic.jpg) no-repeat;
+			background:#767674 url(images/fpRealBrides.jpg) no-repeat;
 			width:100%;
 			height:391px;
 		}
+		img#fsImage {
+			position:absolute;
+			left:12px;
+			top:140px;
+			border: 1px #fff solid;
+		}
 		div#thumbholder {
 			position:absolute;
-			left:400px;
+			left:450px;
 			top:140px;
-			width:380px;
+			width:330px;
 			height:300px;
 			/*border: thin red solid;*/
 		}
@@ -68,6 +74,17 @@
 				timeout: 5000,
 				cleartype: 1
 			});
+			$(".thumbimg").live('mouseover', function(){
+					var fsurl = $(this).attr("src");
+					var urlArray = fsurl.split("/");
+					var filename = urlArray[urlArray.length-1];
+					var fullpath = "brides/"+filename;
+					//alert(filename);
+					//$("#fsImage").attr({src: "collections/"+filename, alt: "Full Size Pic"});
+					$("#fsImage").fadeOut("slow", function() {
+						$(this).attr("src", fullpath).fadeIn('slow');
+					})
+				 });
 			$(function () {  $("#thumbholder").pagination();  });
 		})
 	</script>
@@ -91,11 +108,12 @@
 				?>
 			</div>
 			<div id="fpStatic">
+				<img id="fsImage" src="" />
 				<div id="thumbholder">
 					<?php while($sg_record = mysql_fetch_assoc($sg_rs)) { ?>
-						<a class="thumbnail" href="gown_detail.php?gown_id=<?php echo $sg_record['gown_id']; ?>">
-							<img class="thumbimg" src="salegowns/thumbs/<?php echo $sg_record['gown_img']; ?>" />
-							<p><?php echo $sg_record['gown_name']; ?></p>
+						<a class="thumbnail">
+							<img class="thumbimg" src="brides/thumbs/<?php echo $sg_record['bride_img']; ?>" />
+							<p><?php echo $sg_record['bride_name']; ?></p>
 						</a>
 					<?php } ?>
 				</div>

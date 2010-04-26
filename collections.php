@@ -17,6 +17,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/paginator3.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/fontstyle.css" type="text/css" charset="utf-8">
@@ -32,6 +33,7 @@
 				timeout: 5000,
 				cleartype: 1
 			});
+			$(function () {  $("#thumbholder").pagination();  });
 			$('#submenuitems li').hover(function(e){
 				var id = $(this).attr("id");
 				var url ='designer_info_pump.php?col_id=';
