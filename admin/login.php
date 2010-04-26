@@ -10,7 +10,7 @@
 	$record = mysql_fetch_assoc($rs);		
 	if (sha1($password) == $record['password']) {
 	$_SESSION['authenticated'] = 'Yes';
-	header('Location: index.html');
+	header('Location: index.php');
 	} else {
 	echo "Invalid Username or password.<br />";
 	// echo "you typed" . sha1($password) . "<br />";

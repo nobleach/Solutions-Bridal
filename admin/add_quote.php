@@ -49,14 +49,7 @@
 		<div id="wrapper">
 			<h1>ADMIN SECTION: </h1>
 			<div id="styletwo">
-				<ul>
-					<li><a href="index.html" title="" >Edit Frontpage</a></li>
-					<li><a href="edit_collections.php" title="">Edit Collections</a></li>
-					<li><a href="edit_photoshoots.php" title="">Edit Photoshoots</a></li>
-					<li><a href="" title="">Edit Sale Gowns</a></li>
-					<li><a href="" title="">Press</a></li>
-					<li><a href="" title="">Email Brides</a></li>
-				</ul>
+				<?php include('menu.php'); ?>
 			</div>	
 			<form action="" method="post" accept-charset="utf-8">
 				<table>

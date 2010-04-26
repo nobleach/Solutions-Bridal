@@ -4,6 +4,12 @@
 		header('Location: login.html');
 		exit;
 	}
+	require_once('includes/conn_mysql.inc.php');
+	$conn = dbConnect('admin');
+	$bride_id = $_GET['bride_id'];
+	$sg_query = "SELECT * FROM realbrides WHERE bride_id = $bride_id";
+	$sg_rs = mysql_query($sg_query, $conn) or die(mysql_error());
+	$sg_record = mysql_fetch_object($sg_rs);
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -31,22 +37,23 @@
 			<div id="styletwo">
 				<?php include('menu.php'); ?>
 			</div>	
-			<form enctype="multipart/form-data" action="upload_press_img.php" method="post" accept-charset="utf-8">
+			<form enctype="multipart/form-data" action="upload_bride_img.php" method="post" accept-charset="utf-8">
 				<table>
 					<tr>
-						<td><p>Piece Name:</p></td>
+						<td><p>Bride Name:</p></td>
 						<td>
-							<input type="text" name="press_name" value="" id="press_name">
-						</td>
-					</tr>
-					<tr>
-						<td><p>Press Desc:</p></td>
-						<td>
-							<textarea name="press_desc" rows="8" cols="40"></textarea> 
+							<input type="text" name="bride_name" value="<?php echo $sg_record->bride_name; ?>" />
+							<input type="hidden" name="bride_id" value="<?php echo $sg_record->bride_id; ?>" />
 						</td>
 					</tr>
 					<tr>
 						<td><p>Image:</p></td>
+						<td>
+							<img src="../brides/thumbs/<?php echo $sg_record->bride_img; ?>" />
+						</td>
+					</tr>
+					<tr>
+						<td><p>Upload a New Image:</p></td>
 						<td>
 							<input type="file" name="Filedata" value="" id="Filedata">
 						</td>

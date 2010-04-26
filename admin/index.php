@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<style type="text/css" media="screen">
-			#events_box, #fp_pic_box, #ad1_box, #ad2_box {
+			#events_box, #fp_pic_box, #ad1_box, #ad2_box, #quotes_box {
 				border:1px solid red;
 				background:url(images/identback.png);
 			}
@@ -45,6 +45,15 @@
 				height:50px;
 				z-index:3;
 			}
+			#quotes_box {
+				display:none;
+				position:absolute;
+				left:400px;
+				top:90px;
+				width:300px;
+				height:80px;
+				z-index:3;
+			}
 		</style>
 		<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" charset="utf-8">
@@ -61,6 +70,9 @@
 				$('#ad2_link').hover(function() {
 					$('#ad2_box').toggle();
 				})
+				$('#quotes_link').hover(function() {
+					$('#quotes_box').toggle();
+				})
 			})
 		</script>
 	</head>
@@ -69,24 +81,19 @@
 		<div id="wrapper">
 			<h1>ADMIN SECTION: </h1>
 			<div id="styletwo">
-				<ul>
-					<li><a href="index.html" title="" >Edit Frontpage</a></li>
-					<li><a class="current" href="edit_collections.php" title="">Edit Collections</a></li>
-					<li><a href="edit_photoshoots.php" title="">Edit Photoshoots</a></li>
-					<li><a href="" title="">View Measurements</a></li>
-					<li><a href="" title="">Press</a></li>
-					<li><a href="" title="">Newsletter</a></li>
-				</ul>
+				<?php include('menu.php'); ?>
 			</div>
 			<div id="fp_mock">
 				<div id="events_box"></div>
 				<div id="fp_pic_box"></div>
 				<div id="ad1_box"></div>
 				<div id="ad2_box"></div>
+				<div id="quotes_box"></div>
 				<img src="images/front_page.jpg" />
 				<a id="events_link" href="edit_events.php">Edit Events</a> |
-				<a id="ad1_link" href="edit_ad1.php">Edit Ad 1</a> |
-				<a id="ad2_link" href="edit_ad2.php">Edit Ad 2</a>
+				<a id="ad1_link" href="edit_ad.php?ad_id=1">Edit Ad 1</a> |
+				<a id="ad2_link" href="edit_ad.php?ad_id=2">Edit Ad 2</a> | 
+				<a id="quotes_link" href="edit_quotes.php">Edit Quotes</a>
 			</div>
 		</div>
 	</body>

@@ -6,9 +6,8 @@
 	}
 	require_once('includes/conn_mysql.inc.php');
 	$conn = dbConnect('admin');
-	$q_query = 'SELECT * FROM quotes';
-	$q_rs = mysql_query($q_query, $conn) or die(mysql_error());
-	
+	$d_query = 'SELECT * FROM realbrides ORDER BY bride_id ASC';
+	$d_rs = mysql_query($d_query, $conn) or die(mysql_error());
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -66,23 +65,24 @@
 			</div>
 			<table  class="results">
 				<tr>
+					<th>Thumbnail</th>
 					<th>ID</th>
-					<th>QUOTE</th>
-					<th>SIGNATURE LINE</th>
+					<th>Bride Name</th>
 					<th></th>
 					<th></th>
 				</tr>
-				<?php while($q_record = mysql_fetch_assoc($q_rs)) { ?>
+				<?php while($d_record = mysql_fetch_assoc($d_rs)) { ?>
 				<tr>
-					<td><?php echo $q_record['q_id']; ?></td>
-					<td><?php echo $q_record['q_body']; ?></td>
-					<td><?php echo $q_record['q_sig']; ?></td>
-					<td><a href="edit_quote.php?q_id=<?php echo $q_record['q_id']; ?>" >Edit</a></td>
-					<td><a href="delete_quote.php?q_id=<?php echo $q_record['q_id']; ?>" >Delete</a></td>
+					<td><img src="../brides/thumbs/<?php echo $d_record['bride_img']; ?>" /></td>
+					<td><?php echo $d_record['bride_id']; ?></td>
+					<td><?php echo $d_record['bride_name']; ?></td>
+					
+					<td><a href="edit_bride.php?bride_id=<?php echo $d_record['bride_id']; ?>" >Edit</a></td>
+					<td><a href="delete_bride.php?bride_id=<?php echo $d_record['bride_id']; ?>" >Delete</a></td>
 				</tr>
 				<?php } ?>
 			</table>
-			<p><a class="addbutton" href="add_quote.php">Add Quote</a></p>
+			<p><a class="addbutton" href="add_bride.php">Add Real Bride</a></p>
 		</div>
 	</body>
 </html>

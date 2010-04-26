@@ -1,5 +1,5 @@
 /* ^^^^^^^^ BELOW IS THE CODE FOR THE MENU ^^^^^^^^^^ */
-#styletwo{position:relative;display:block;height:24px;font-size:11px;font-weight:bold;background:transparent url(../images/bgOFF.gif) repeat-x top left;font-family:Arial,Verdana,Helvitica,sans-serif;}
+#styletwo{position:relative;display:block;height:24px;font-size:9px;font-weight:bold;background:transparent url(../images/bgOFF.gif) repeat-x top left;font-family:Arial,Verdana,Helvitica,sans-serif;}
 #styletwo ul{margin:0;padding:0;list-style-type:none;width:auto;}
 #styletwo ul li{display:block;float:left;margin:0 1px 0 0;}
 #styletwo ul li a{display:block;float:left;color:#000;text-decoration:none;padding:6px 20px 0 20px;height:24px;}

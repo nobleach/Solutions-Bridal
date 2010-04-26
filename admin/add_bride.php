@@ -31,18 +31,12 @@
 			<div id="styletwo">
 				<?php include('menu.php'); ?>
 			</div>	
-			<form enctype="multipart/form-data" action="upload_press_img.php" method="post" accept-charset="utf-8">
+			<form enctype="multipart/form-data" action="upload_gown_img.php" method="post" accept-charset="utf-8">
 				<table>
 					<tr>
-						<td><p>Piece Name:</p></td>
+						<td><p>Bride Name:</p></td>
 						<td>
-							<input type="text" name="press_name" value="" id="press_name">
-						</td>
-					</tr>
-					<tr>
-						<td><p>Press Desc:</p></td>
-						<td>
-							<textarea name="press_desc" rows="8" cols="40"></textarea> 
+							<input type="text" name="gown_name" value="" id="gown_name">
 						</td>
 					</tr>
 					<tr>
