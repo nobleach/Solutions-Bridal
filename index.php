@@ -156,7 +156,7 @@
 		<?php include('includes/ads.php'); ?>
 	</div>
 	<div id="footer">
-		<p>Winter Park P: 407.647.8666 330 W. Fairbanks Ave. Winter Park, FL 32789 | Gainesville P: 352.367.0070 6450 SW Archer Rd. Suite 230 Gainesville, FL 32608</p>
+		<?php include('includes/footer.inc.php'); ?>
 	</div>
 </body>
 </html>
