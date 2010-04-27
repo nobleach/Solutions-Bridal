@@ -14,7 +14,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="scripts/paginator2.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/paginator4.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
@@ -45,7 +45,7 @@
 		}
 		.thumbnail {
 			float:left;
-			max-width:108px;
+			width:108px;
 			margin:3px;
 			text-decoration:none;
 		}
