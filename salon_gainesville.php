@@ -18,6 +18,10 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
+	<style>
+		a.email {
+			color: #E6D7B4;
+		}
 	</style>
 	<title>Solutions Bridal - Gainesville</title>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
@@ -57,6 +61,16 @@
 					352.367.0070<br />
 					6450 SW Archer Rd. Suite 230 <br />
 					Gainesville, FL 32608	
+				</p>
+				<p>
+					Email: <a class="email" href="mailto:tali@solutionsbridal.com">tali@solutionsbridal.com</a>
+				</p>
+				<p>
+					Store Hours: <br />
+					Mon - Sat 10:30am - 6pm<br /> 
+					Thursday 10:30 - 8pm <br />
+					Sundays:1 - 5pm<br />
+					Appointments Recommended.
 				</p>
 			</div>
 			

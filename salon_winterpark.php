@@ -18,6 +18,11 @@
 	<!--[if lte IE 6]>
 		<link rel="stylesheet" media="all" type="text/css" href="css/dropdown_ie.css" />
 	<![endif]-->
+	<style>
+		a.email {
+			color: #E6D7B4;
+		}
+	</style>
 	<title>Solutions Bridal - Winter Park</title>
 	<script src="scripts/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.cycle.lite.min.js" type="text/javascript" charset="utf-8"></script>
@@ -55,8 +60,18 @@
 						Winter Park<br />
 						407.647.8666<br />
 						Fax 407.647.8633<br />
-						330 W. Fairbanks Ave.<br />
-						Winter Park, FL. 32789
+						4194 Conroy Rd, Suite 103<br />
+						Orlando, FL 32839
+				</p>
+				<p>
+					Email: <a class="email" href="mailto:tali@solutionsbridal.com">tali@solutionsbridal.com</a>
+				</p>
+				<p>
+					Store Hours:<br />
+					Monday - Friday: 11:00- 7pm<br />
+					Saturdays: 10:00-6pm<br />
+					Sundays: 1:00-6pm<br />
+					Appointments Recommended
 				</p>
 			</div>
 			<img class="fpimage" src="images/salon_winterpark.jpg" />

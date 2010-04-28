@@ -1,16 +1,12 @@
 find out why viewgallery.php isn't going elastic even with min-height specified. 
-change address on ALL pages, maybe make it an include....
-change footer text size so that it all fits on one page.
-change text on all static pages as per PDF file
-change "sort by" for collections/designers query
-paginate collections for more than 4 photos.
+
 add email address tali@solutionsbridal.com for Gainesville
-Store Hours: monday - saturday 10:30 - 6pm Thursday 10:30 - 8pm Sundays:1 - 5pm
+Store Hours: monday - saturday 10:30 - 6pm 
+Thursday 10:30 - 8pm 
+Sundays:1 - 5pm
 Appointments Recommended.
 
-make event text smaller so that it doesn't break to newline.
 
-in admin section make sure that all redirects to index.html go to index.php
 Winter Park: email tali@solutionsbridal.com
 Monday - Friday 11am - 7pm
 Saturdays - 10am - 6pm
