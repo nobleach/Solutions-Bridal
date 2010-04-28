@@ -33,7 +33,7 @@
 				timeout: 5000,
 				cleartype: 1
 			});
-			$(function () {  $("#thumbholder").pagination();  });
+			
 			$('#submenuitems li').hover(function(e){
 				var id = $(this).attr("id");
 				var url ='designer_info_pump.php?col_id=';
@@ -53,6 +53,13 @@
 			})
 		})
 	</script>
+	<style>
+		.paginator {
+			position:absolute;
+			top:485px;
+			margin-left:12px;
+		}
+	</style>
 </head>
 
 <body>

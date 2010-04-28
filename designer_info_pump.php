@@ -14,9 +14,11 @@
 <p class="galdescription">
 	<?php echo $info_record['col_desc']; ?>	
 </p>
-
+<script>
+	$(function () {  $("#galthumbs").pagination();  });
+</script>
 <div id="galthumbs">
 	<?php do { ?>
-	<img id="<?php echo $pic_record['cphoto_id']; ?>" class="galthumb" src="collections/thumbs/<?php echo $pic_record['cphoto_url']; ?>">
+	<img id="<?php echo $pic_record['cphoto_id']; ?>" class="galthumb" src="collections/thumbs/<?php echo $pic_record['cphoto_url']; ?>" width= "45" height="70" />
 	<?php } while($pic_record = mysql_fetch_assoc($pic_rs));?>
 </div>

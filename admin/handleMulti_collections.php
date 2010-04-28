@@ -18,13 +18,13 @@ foreach ($_FILES["Filedata"]["error"] as $key => $error) {
 		if($width > $height){
 			$newFsWidth = 389;
 			$newFsHeight = 250;
-			$newThWidth = 101;
-			$newThHeight = 65;
+			$newThWidth = 70;
+			$newThHeight = 45;
 		} else {
 			$newFsWidth = 250;
 			$newFsHeight = 389;
-			$newThWidth = 65;
-			$newThHeight = 101;
+			$newThWidth = 45;
+			$newThHeight = 70;
 		}
 			
 		$image_fs = imagecreatetruecolor($newFsWidth, $newFsHeight);
