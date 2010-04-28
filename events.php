@@ -21,7 +21,7 @@
 	<![endif]-->
 	<link rel="stylesheet" href="css/fontstyle.css" type="text/css" charset="utf-8">
 	<style type="text/css" media="screen">
-		h1.fontface {font: 40px/59px 'TeXGyrePagellaRegular', Arial, sans-serif;/*letter-spacing: 4px;*/ color:#e6d7b4; margin-bottom:-23px;}
+		h1.fontface {font: 30px/59px 'TeXGyrePagellaRegular', Arial, sans-serif;/*letter-spacing: 4px;*/ color:#e6d7b4; margin-bottom:-23px;}
 		h2.fontface {font: 25px/46px 'TeXGyrePagellaRegular', Arial, sans-serif;/*letter-spacing: 7px;*/ color:#fff; border-bottom:1px solid #fff;}
 		p.style1 {font: 16px 'TeXGyrePagellaRegular', Arial, sans-serif; color:#fff; }
 	</style>
