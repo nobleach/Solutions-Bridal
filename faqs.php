@@ -52,30 +52,26 @@
 			<div id="infodiv">
 				<h1><img src="images/faqsh1.png" /></h1>
 				<p>
-					<span class="question">Does a bride need to schedule an appointment?</span><br />
-					We recommend scheduling an appointment to insure personal attention and a dressing room. You will
-					have your own personal bridal stylist by your side every step of the way providing suggestions to fit
-					your style.
+					<span class="question">Do you need to schedule an appointment?</span><br />
+					We recommend scheduling an appointment to insure a dressing room and a personal stylist.
 				</p>				
 				<p>
-					<span class="question">Should you bring an entourage?</span><br />
-					While searching for your dream wedding gown, fewer opinions may make the experience more
-					enjoyable and intimate.
+					<span class="question">How many people should you bring?</span><br />
+					While searching for your dream wedding gown, fewer opinions can make the experience more intimate and enjoyable.
 				</p>
 				<p>
-					<span class="question">When should you order your gown?</span><br />
-					Its never too early to select your gown and bridesmaid dresses. Some designers can take up to eight
-					months to create your gown, but this just speaks to their quality and attention to detail. Don't be afraid
-					to fall in love with one of the first gowns you try on, the process is different for everyone and you can
-					never recreate the moment you find your dress. If your wedding is less than 8 months away, please ask
-					your stylist for the designer's rush options.
+					<span class="question">When should you order my gown?</span><br />
+					It is never too early to order your gown and bridesmaid dresses. Some gowns can take up to eight months, but this 
+					just speaks to their quality and attention to detail. Don't be afraid to fall in love with one of the first gowns 
+					you try on, the process is different for everyone and you can never recreate the moment you find your dress. If 
+					your wedding is less than 8 months away, please ask your stylist for the designer's rush options.
 				</p>
 				<p>
 					<span class="question">What should you bring to your appointment?</span><br />
-					Aside from yourself, we will take care of the rest! We invite you to bring inspiration pictures and ideas
-					to explain your vision, but an open mind works just as well too. Please bring any heirloom pieces you
-					will be wearing on your wedding day. Also, its recommended you come with hair and make-up similar
-					to your wedding day look.	
+					Aside from yourself, we will take care of the rest! We invite you to bring inspiration pictures to explain your 
+					vision, but an open mind works just as well. Please bring any heirloom pieces you will be wearing on your wedding 
+					day. Also, it is recommended you come with hair and make-up similar to your wedding day look. We will provide all 
+					undergarments and shoes.	
 				</p>
 			</div>
 			<div id="overlay">

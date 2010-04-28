@@ -58,16 +58,14 @@
 			<div id="infodiv" style="top:270px;">
 				<h1><img src="images/ourstaffh1.png" /></h1>
 				<p>
-					The Solutions Bridal team have been through extensive training to provide with best knowledge about
-				each designer, gown, and fashion trends. A few of our stylist have even created their own clothing lines
-				and accessory collections, which offers you expert in-house fashion advice! They are absolutely love
-				what they do and will put together your perfect ensemble customizing almost anything in store to fit
-				your taste.
+					The Solutions Bridal stylists are extensively trained to provide the best knowledge on each gown, designer, and fashion trend. 
+					A few of our stylist have even created their own clothing and accessory lines, which offers you expert in-house fashion advice. 
+					We believe a gown is meant to be yours if it represents your personality. To create a look that is truly you, our team will 
+					customize almost anything in store to make it one of a kind.
 				</p>
 				<p>
-				Not only will the stylist provide you with impeccable, award-winning service and attention to detail,
-				they can help point you in the right direction by recommending other local vendors to complete your
-				wedding day.
+					Not only will the stylist provide you with impeccable, award-winning service, they can help point you in the right direction by 
+					recommending local vendors to complete your wedding day.
 				</p>
 			</div>
 			<div id="overlay">

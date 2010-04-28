@@ -54,21 +54,13 @@
 			<div id="infodiv" style="top:220px">
 				<h1><img src="images/companyh1.png" /></h1>
 				<p>
-					With several years of experience in the wedding industry, Newell Fox, the owner of Solutions Bridal
-					has learned first hand what today's brides are looking for.	
+					With several years of experience in the wedding industry, Newell Fox, the owner of Solutions Bridal has learned first hand what the modern-day brides are looking for.
 				</p>
 				<p>
-					To provide the selection modern-day bride's desire, the Solutions Bridal team has hand-selected each
-					designer to provide a wide array of styles and silhouettes. Collections like McCaffrey Haute Couture
-					are exclusively available at Solutions Bridal. To stay up to day on the latest trends in the bridal
-					industry, our buyers personally select each gown right off the New York runway.
-					From the moment you enter the doors of our spacious and elegant salons, one or more of our professional
-					stylists will be at your side through each and every step. We create a memorable experience with
-					personal attention, follow-up and an overall enjoyable-stress-free environment.
+					The Solutions Bridal team stays up to date on the latest trends in industry. The buyers select each gown right off the designer's runway creating a unique selection of styles in silhouettes and adornment. Located in Orlando and Gainesville, Solutions Bridal has become a bridal addiction for brides-to-be throughout the Southeast and beyond.
 				</p>
 				<p>
-					The Solutions Bridal staff in Orlando and Gainesville takes great pleasure in providing the service and
-					selection to help create the wedding of your dreams.
+					Known for its New York loft vibe with southern hospitality, Solutions Bridal is the ultimate in bridal experience.
 				</p>
 			</div>
 			<img class="fpimage" src="images/fpcompany.jpg" />

@@ -52,14 +52,10 @@
 			<div id="infodiv" style="top:270px;">
 				<h1><img src="images/experienceh1.png" /></h1>
 				<p>
-					The Solutions Bridal experience begins from the moment our brides walk through the door. You can
-					expect to be greeted by your own bridal stylist who will not only help you find your dream gown, but
-					get to know you and become a crucial factor in your big day. We build quality relationships with our
-					brides, not just for the moment you find your gown, but for the many years after.
+					The Solutions Bridal experience begins from the moment you walk through the door. You can expect to be greeted by your own bridal stylist who will not only help you find your dream gown. We build quality relationships with our brides, not just for the moment you find your gown, but for the many years after.
 				</p>
 				<p>
-					Our knowledgeable stylists will get to know your individual style and vision, and will put together your
-					dream bridal ensemble that includes shoes, accessories, and undergarments.
+					Our knowledgeable stylists will get to know your individual style and vision. From there, we will help create your dream bridal ensemble with shoes, accessories, and undergarments.
 				</p>
 				<p>
 					The Orlando and Gainesville location have a seamstress available in-store for your convenience.
