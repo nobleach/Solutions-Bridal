@@ -33,6 +33,6 @@ $sql = "UPDATE ads SET ad_img = '$fsName', ad_link = '$ad_link' WHERE ad_id = $a
 //echo $sql;
 $handle = mysql_query($sql, $conn) or die(mysql_error());
 if($handle) {
-	redirect_to("index.html");
+	redirect_to("index.php");
 }
 ?>
