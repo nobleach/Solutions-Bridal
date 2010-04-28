@@ -37,9 +37,9 @@
 		}
 		div#thumbholder {
 			position:absolute;
-			left:450px;
+			left:350px;
 			top:140px;
-			width:330px;
+			width:430px;
 			height:300px;
 			/*border: thin red solid;*/
 		}

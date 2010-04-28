@@ -43,7 +43,7 @@
 
 	var startPage = 1; // start page
 
-	var itemsPerPage = 6; // no. of items you want to show on one page
+	var itemsPerPage = 9; // no. of items you want to show on one page
 
 	var firstPageSymbol = '<<'; // to indicate First Page
 
