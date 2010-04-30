@@ -14,7 +14,8 @@
 		$insert_query = "INSERT INTO collections 
 							SET col_type = '$col_type', 
 							col_name = '$col_name', 
-							col_desc = '$col_desc'";
+							col_desc = '$col_desc',
+							col_url = '$col_url'";
 		//echo $insert_query;
 		$handle = mysql_query($insert_query, $conn) or die(mysql_error());
 		if($handle) {
@@ -78,6 +79,11 @@
 								
 							</textarea>
 						</td>
+					<tr>
+						<td><p>Designer Website:</p></td>
+						<td><input type="text" name="col_url" value="" id="col_url"> </td>
+					</tr>
+					<tr>
 					</tr>
 				</table>
 				<br />

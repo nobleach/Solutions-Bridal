@@ -15,7 +15,8 @@
 	$insert_query = "UPDATE collections 
 						SET col_type = '$col_type', 
 						col_name = '$col_name', 
-						col_desc = '$col_desc'
+						col_desc = '$col_desc',
+						col_url = '$col_url'
 						WHERE col_id = $col_id";
 	//echo $insert_query;
 	$handle = mysql_query($insert_query, $conn) or die(mysql_error());
