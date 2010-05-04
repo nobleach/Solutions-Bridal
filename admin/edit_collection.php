@@ -71,6 +71,10 @@
 							</textarea>
 						</td>
 					</tr>
+					<tr>
+						<td><p>Designer Website:</p></td>
+						<td><input type="text" name="col_url" value="<?php echo $collection_record->col_url; ?>" id="col_url"> </td>
+					</tr>
 				</table>
 				<br />
 				<input type="hidden" name="col_id" value="<?php echo $collection_record->col_id; ?>" id="col_id">

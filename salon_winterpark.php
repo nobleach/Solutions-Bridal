@@ -64,6 +64,9 @@
 						Orlando, FL 32839
 				</p>
 				<p>
+					<a class="email" href="http://maps.google.com/maps?hl=en&ie=UTF8&q=4194+Conroy+Rd,+Suite+103+Orlando,+FL+32839&fb=1&gl=us&ei=9H7YS_W7HIvgzQTTrryEDA&ved=0CBQQpQY&view=map&geocode=Ff6rsgEd3YYl-w&split=0&hq=&hnear=4194+Conroy+Rd+%23103,+Orlando,+Orange,+Florida+32839&ll=28.486676,-81.426737&spn=0.003498,0.006968&t=h&z=18">Directions</a>
+				</p>
+				<p>
 					Email: <a class="email" href="mailto:tali@solutionsbridal.com">tali@solutionsbridal.com</a>
 				</p>
 				<p>

@@ -60,7 +60,7 @@
 					While searching for your dream wedding gown, fewer opinions can make the experience more intimate and enjoyable.
 				</p>
 				<p>
-					<span class="question">When should you order my gown?</span><br />
+					<span class="question">When should you order your gown?</span><br />
 					It is never too early to order your gown and bridesmaid dresses. Some gowns can take up to eight months, but this 
 					just speaks to their quality and attention to detail. Don't be afraid to fall in love with one of the first gowns 
 					you try on, the process is different for everyone and you can never recreate the moment you find your dress. If 

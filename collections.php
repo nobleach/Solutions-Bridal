@@ -56,7 +56,7 @@
 	<style>
 		.paginator {
 			position:absolute;
-			top:485px;
+			top:495px;
 			margin-left:12px;
 		}
 	</style>

@@ -62,7 +62,7 @@
 		<![endif]-->
 		<ul>
 			<li><a href="salon_gainesville.php">GAINESVILLE</a></li>
-			<li><a href="salon_winterpark.php">WINTER PARK</a></li>
+			<li><a href="salon_winterpark.php">ORLANDO</a></li>
 		</ul>
 		<!--[if lte IE 6]>
 		</td></tr></table>
