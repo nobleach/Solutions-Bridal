@@ -8,7 +8,7 @@
 	
 	$pic_query = "SELECT cphoto_id, cphoto_url FROM collection_photos WHERE col_id = $col_id";
 	$pic_rs = mysql_query($pic_query, $conn) or die(mysql_error());
-	$pic_record = mysql_fetch_assoc($pic_rs);
+	
 ?>
 <h1><?php echo $info_record['col_name']; ?></h1>
 <p class="galdescription">
@@ -21,7 +21,7 @@
 	$(function () {  $("#galthumbs").pagination();  });
 </script>
 <div id="galthumbs">
-	<?php do { ?>
+	<?php while($pic_record = mysql_fetch_assoc($pic_rs)) { ?>
 	<img id="<?php echo $pic_record['cphoto_id']; ?>" class="galthumb" src="collections/thumbs/<?php echo $pic_record['cphoto_url']; ?>" width= "45" height="70" />
-	<?php } while($pic_record = mysql_fetch_assoc($pic_rs));?>
+	<?php } ;?>
 </div>
