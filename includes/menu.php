@@ -29,7 +29,7 @@
 		<![endif]-->
 		<ul>
 			<li><a href="collections.php?col_type=BRIDAL">BRIDAL</a></li>
-			<li><a href="collections.php?col_type=ATTENDANTS">ATTENDANTS</a></li>
+			<li><a href="collections.php?col_type=BRIDESMAIDS">BRIDESMAIDS</a></li>
 			<li><a href="collections.php?col_type=ACCESSORIES">ACCESSORIES</a></li>
 			<li><a href="collections.php?col_type=MOMS">MOMS</a></li>
 			<li><a href="collections.php?col_type=FLOWERGIRLS">FLOWERGIRLS</a></li>

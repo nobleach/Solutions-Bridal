@@ -61,7 +61,7 @@
 						<td>
 							<select name="col_type">
 								<option>BRIDAL</option>
-								<option>ATTENDANTS</option>
+								<option>BRIDESMAIDS</option>
 								<option>ACCESSORIES</option>
 								<option>MOMS</option>
 								<option>FLOWERGIRLS</option>
